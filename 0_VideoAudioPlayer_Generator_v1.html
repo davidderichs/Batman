@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<title>Video&Audio: Player and Genarator Demo</title>
+    <header>
+      <h1>Video & Audio Player and Generator</h1>
+    </header> 
+
+
+<style>
+#canvasID {
+
+
+
+}
+
+#videoID {
+
+}
+</style>
+
+
+
+<body>
+
+<video id="videoID" preload="auto" loop width="720" height="404">
+</video>
+<audio id="audioID" preload="auto" loop >
+</audio>
+<canvas id=canvasID></canvas>
+<div>
+<input type="button" id="playVideoAudio" onclick="toggleplay(id)" value="Play/Pause" >
+
+<select id="selProcess" onchange="toggleplay(id)">
+  <option value="u0.1">Übung0: V-Generator - Default  rote Fläche</option>
+  <option value="u0.2">Übung0: Video - Default Channel(R/G/B) Video</option>
+  
+  <option value="u1.1">Übung1: V-Generator - Colour Area</option>
+  <option value="u1.2">Übung1: Video - Bridness Video</option>
+  <option value="u1.10">Übung1: Video - Perception Transparency</option>
+  <option value="u1.11">Übung1: Video - Perception Time</option>
+  
+  <option value="u2.1">Übung2: V-Generator - Cosinus</option>
+  <option value="u2.2">Übung2: Video - Contrast</option>
+  <option value="u2.3">Übung2: Video - Cromakey</option>
+  <option value="u2.4">Übung2: Video - TP1O</option>
+  <option value="u2.4a">Übung2: V-Generator Cos64 - TP1O</option>
+  <option value="u2.5a">Übung2: Video - HP1O - Visuell</option>
+  <option value="u2.5">Übung2: Video - HP1O</option>
+  <option value="u2.5b">Übung2: V-Generator Cos64  - HP1O</option>
+  <option value="u2.6">Übung2: Video - TP2O</option>
+  <option value="u2.7">Übung2: Video - HP2O</option>
+  <option value="u2.8">Übung2: Video - Soebelfilter</option>
+
+  
+  <option value="u3.1">Übung3: V-Generator - Deltakompression</option>
+  <option value="u3.2">Übung3: Video - Deltakompression</option>
+  <option value="u3.3">Übung3: V-Generator - Subbandkompression</option>
+  <option value="u3.4">Übung3: Video - Subbandkompression</option>
+  <option value="u3.5">Übung3: V-Generator - oneHz4x4 - FFT-Kompression</option>
+  <option value="u3.6">Übung3: V-Generator - picture4x4 - FFT-Kompression</option>
+  <option value="u3.7">Übung3: Video - video128x128 - FFT-Kompression</option>
+  
+  <option value="u4.1">Übung4: Video - 1</option>
+  <option value="u4.2">Übung4: Video - 2</option>
+  <option value="u4.3">Übung4: Video - 3</option>
+  <option value="u4.4">Übung4: Video - 4</option>
+  <option value="u4.5">Übung4: Video - 5</option>
+  <option value="u4.6">Übung4: Video - 6 </option>
+  <option value="u4.7">Übung4: Video - 7 </option>
+  <option value="u4.8">Übung4: Video - 8 </option>
+  <option value="u4.9">Übung4: Video - 9 </option>
+   <option value="u4.10">Übung4: Video - 10 </option>
+   <option value="u4.11">Übung4: Video - 11 </option>
+	<option value="u4.12">Übung4: Video - 12</option>
+	<option value="u4.13">Übung4: Video - 13</option>
+ 	<option value="u4.14">Übung4: Video - 14</option>
+	
+  <option value="u10.1">Übung0: A-Generator - Default Rauschen</option>
+  <option value="u10.2">Übung0: Audio - Default Channel (R/L) Audio</option>
+  <option value="u11.1">Übung1: A-Generator - Sinus</option>
+  <option value="u11.2">Übung1: Audio - Mono Audio</option>
+  <option value="u11.10">Übung1: Audio - Perception MixingLevel</option>
+  <option value="u11.11">Übung1: Audio - Perception Time</option>
+
+  <option value="u12.1">Übung2: A-Generator - Klang</option>
+  <option value="u12.2">Übung2: Audio - Volume</option>
+  <option value="u12.3">Übung2: Audio - Delay</option>
+  <option value="u12.3a">Übung2: Audio - Delay16K</option>
+  <option value="u12.3b">Übung2: Gen - Delay</option>
+  <option value="u12.4">Übung2: A-Generator - TP1O</option>
+  <option value="u12.5">Übung2: A-Generator - HP1O</option>
+  <option value="u12.6">Übung2: A-Generator - TP2O</option>
+  <option value="u12.7">Übung2: A-Generator - HP2O</option>
+  <option value="u12.8">Übung2: A-Generator - BP2O</option>
+  <option value="u12.9">Übung2: A-Generator - BS2O</option>
+
+
+  <option value="u13.1">Übung3: A-Generator - Deltakompression</option>
+  <option value="u13.2">Übung3: Audio - Deltakompression</option>
+  <option value="u13.3">Übung3: A-Generator - Subbandkompression</option>
+  <option value="u13.4">Übung3: Audio - Subbandkompression</option>
+  <option value="u13.5">Übung3: A-Generator - oneHz4 - FFT-Kompression</option>
+  <option value="u13.6">Übung3: Audio - Audio16384/2 - FFT-Kompression</option>
+  <option value="u13.5a">Übung3: A-Generator - WhiteNoise - FFT-Kompression</option>
+
+  <option value="u14.1">Übung4: Audio - 1</option>
+  <option value="u14.2">Übung4: Audio - 2</option>
+  <option value="u14.3">Übung4: Audio - 3</option>
+  <option value="u14.4">Übung4: Audio - 4</option>
+  <option value="u14.5">Übung4: Audio - 5</option>
+  <option value="u14.6">Übung4: Audio - 6</option>
+  <option value="u14.7">Übung4: Audio - 7</option>
+  <option value="u14.8">Übung4: Audio - 8</option>
+  <option value="u14.9">Übung4: Audio - 9</option>
+  <option value="u14.10">Übung4: Audio - 10</option>
+  <option value="u14.11">Übung4: Audio - 11</option>
+  <option value="u14.12">Übung4: Audio - 12</option>
+  <option value="u14.13">Übung4: Audio - 13</option>
+  <option value="u14.14">Übung4: Audio - 14</option>
+ 
+
+</select>
+<label id="labelIn1"> In1 </label><input type="text" size="3" id="In1" value="150">
+<label id="labelIn2"> In2 </label><input type="text" size="3" id="In2" value="150">
+<label id="labelIn3"> In3 </label><input type="text" size="3" id="In3" value="40">
+<label id="labelIn4"> In4 </label><input type="text" size="3" id="In4" value="10">
+<input type="button" id="Log" onclick="drawLog()" value="Log">
+</div>
+<pre id="preLog"></pre>
+<a href="https://141.64.64.17/web/html5/video/measurement/0_Measurement17.html"  onclick="window.open('https://141.64.64.17/web/html5/video/measurement/0_Measurement17.html', 'newwindow', 'width=980, height=800'); return false;"> Measurment Video</a>
+<a href="https://141.64.64.17/web/html5/audio/measurement/0_Measurement17.html"  onclick="window.open('https://141.64.64.17/web/html5/audio/measurement/0_Measurement17.html', 'newwindow', 'width=980, height=800'); return false;"> Measurment Audio</a>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/processing_part1.js"></script>
+<script type="text/javascript" src="js/processing_part2.js"></script>
+<script type="text/javascript" src="js/processing_part3.js"></script>
+<script type="text/javascript" src="js/processing_part4.js"></script>
+<script src="js/FFT2D.js"></script>
+<script src="js/FFT1D.js"></script>
+</body>
+</html>
