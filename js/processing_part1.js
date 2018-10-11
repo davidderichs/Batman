@@ -809,7 +809,9 @@ function processingAudioMono(event) {
 	LogArray = ["monoSamples"];  
 }  
 function StereoToMono(iOutput, iInput) { 
-	
+	for (var i=0; i<iOutput.length; i++){
+	    iOutput[i]=iInput.r[i]+iInput.l[i]/2;
+    }
 }
 
 function genSinus(iOutput, iHorizontalFrequency, iSampleRate, iOffset) {
