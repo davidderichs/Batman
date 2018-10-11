@@ -678,9 +678,12 @@ function genColourArea(iOutput, iR,iG,iB) {
     }
 }
 function GRAYtoRGB(iOutput, iInput) {  
-    let x = 3;
+    let x = 0;
     for(i = 0; i < iInput.length; i++){
-        iOutput[x] = (iInput[i], iInput[i], iInput[i], 255);
+        iOutput[x] = iInput[i]
+        iOutput[x + 1] = iInput[i]
+        iOutput[x + 2] = iInput[i]
+        iOutput[x + 3] = 255;
         x += 4;
     }
 }
