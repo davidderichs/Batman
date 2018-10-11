@@ -678,10 +678,20 @@ function genColourArea(iOutput, iR,iG,iB) {
     }
 }
 function GRAYtoRGB(iOutput, iInput) {  
-
+    let x = 3;
+    for(i = 0; i < iInput.length; i++){
+        iOutput[x] = (iInput[i], iInput[i], iInput[i], 255);
+        x += 4;
+    }
 }
 function RGBtoGRAY(iOutput, iInput) { 
-
+    let x = 0;
+    for(i = 0; i < iInput.length; i += 4){
+        // mittelwert aus rgb bilden
+        let mittelwert = (iInput[i] + iInput[i + 1] + iInput[i + 2]) / 3;
+        iOutput[x] = mittelwert;
+        x++;
+    };
 }
 function processingVideoPerceptionTransparency() { 
 	var	clip1StartTime  = 15000;
