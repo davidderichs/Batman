@@ -798,9 +798,7 @@ function processingAudioGenSinus(event) {
     writeWebAudio(event,monoSamples);
 	
 	LogArray = ["monoSamples"];  
-}
-
-// Aufgabe Audio 1.1 Monochromes Audio-Signal
+} 
 function processingAudioMono(event) {  
     audArrayIn = readWebAudio(event);
 	// Process chain begin    
@@ -808,22 +806,19 @@ function processingAudioMono(event) {
 	// Process chain end
     writeWebAudio(event.outputBuffer,monoSamples);
 	
-	LogArray = ["monoSamples"];
+	LogArray = ["monoSamples"];  
+}  
+function StereoToMono(iOutput, iInput) { 
+	for (var i=0; i<iOutput.length; i++){
+	    iOutput[i]=iInput.r[i]+iInput.l[i]/2;
+    }
 }
 
-// Aufgabe Audio 1.1 Monochromes Signal
-function StereoToMono(iOutput, iInput) {
-	for (var i = 0; i<iOutput.length; i++){
-		iOutput[i] = (iInput.l[i] + iInput.r[i]) / 2;
-	}
-}
-
-// Aufgabe Audio 1.1 Sinus-Generieren
 function genSinus(iOutput, iHorizontalFrequency, iSampleRate, iOffset) {
-	for (var i = 0; i<iOutput.length; i++){
+
+	for(var i=0; i<iOutput.length; i++){
 		iOutput[i]=Math.sin(2*Math.PI*iHorizontalFrequency/iSampleRate*i);
 	}
-
 }
 function processingAudioPerceptionMixingLevel(event) { 
  	var	clip1StartTime  = 15000;
