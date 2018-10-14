@@ -670,13 +670,31 @@ function processingVideoGray() {
 	LogArray = ["imgArrayIn", "BridnessSamples",  "imgArrayOut"];
 }
 function genColourArea(iOutput, iR,iG,iB) {
-
+    for(i = 0; i < iOutput.length; i += 4){
+        iOutput[i] = iR;
+        iOutput[i+1] = iG;
+        iOutput[i+2] = iB;
+        iOutput[i+3] = 255;
+    }
 }
 function GRAYtoRGB(iOutput, iInput) {  
-
+    let x = 0;
+    for(i = 0; i < iInput.length; i++){
+        iOutput[x] = iInput[i]
+        iOutput[x + 1] = iInput[i]
+        iOutput[x + 2] = iInput[i]
+        iOutput[x + 3] = 255;
+        x += 4;
+    }
 }
 function RGBtoGRAY(iOutput, iInput) { 
-
+    let x = 0;
+    for(i = 0; i < iInput.length; i += 4){
+        // mittelwert aus rgb bilden
+        let mittelwert = (iInput[i] + iInput[i + 1] + iInput[i + 2]) / 3;
+        iOutput[x] = mittelwert;
+        x++;
+    };
 }
 function processingVideoPerceptionTransparency() { 
 	var	clip1StartTime  = 15000;
@@ -866,7 +884,6 @@ iInput1DurationTime1 /=1000;
 if ((iCurrentTime > iInput1DurationTime1) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;	
 
 iClip1Mixing /=100;
-		
 }
 
 function setClipAudioCut121(iPlayer,iOutput, iInput, iInput2, iClip1StartTime, iInput1DurationTime1,iInput2DurationTime1, iInput1DurationTime2) { 
@@ -881,8 +898,5 @@ iInput1DurationTime2 /=1000;
 if ((iCurrentTime > iInput1DurationTime2) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;	
  
 if ((iCurrentTime < iInput1DurationTime1) || (iCurrentTime > iInput2DurationTime1)) {iInputN = iInput ;} 
-else {iInputN = iInput2; }  
-
-
-		
+else {iInputN = iInput2; }
 }
