@@ -266,6 +266,22 @@
   </p>
 </div>
 
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.5 * - Aufnahme von Sprachsignalen - Gegenüberstellung</h1>  
+  <p>Phonemisch</p>
+  <img src="./Uebung-1/Aufgabe-1-5-Aufnahme-Sprachsignale/SCH-Waveform.JPG">
+  <p>Plosion</p>
+  <img src="./Uebung-1/Aufgabe-1-5-Aufnahme-Sprachsignale/K-Waveform.JPG">
+  <p>Phonemische Klänge sind periodischer und langanhaltender. Plosionen sind impulsiv und sporadisch.</p>
+  <p>Phonemisch</p>
+  <img src="./Uebung-1/Aufgabe-1-5-Aufnahme-Sprachsignale/SCH-FFT.JPG">
+  <p>Plosion</p>
+  <img src="./Uebung-1/Aufgabe-1-5-Aufnahme-Sprachsignale/K-FFT.JPG">
+  <p>Das Phonemische Spektrum ist weniger diversifiziert. Das Spektrum der Plosion ist ausgeprägter und breiter.</p>
+</div>
+
 
 
 
