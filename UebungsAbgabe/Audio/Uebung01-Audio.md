@@ -282,6 +282,300 @@
   <p>Das Phonemische Spektrum ist weniger diversifiziert. Das Spektrum der Plosion ist ausgeprägter und breiter.</p>
 </div>
 
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen - Gegenüberstellung</h1>  
+  <p>fehlt noch</p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Sprachsignal - keine Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Sprachsignal-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Sprachsignal-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Sprachsignal-FFT.JPG">
+  <p>
+    Hoher Tiefen-Anteil im Frequenz-Spektrum. Pegelauslastung bei ca. 80%. Klares Signal von mittlerer bis guter 		Qualität.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Sprachsignal - geringe Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Sprachsignal-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Sprachsignal-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Sprachsignal-FFT.JPG">
+  <p>
+    Hoher Tiefen-Anteil im Frequenz-Spektrum, aber mehr mittlere bis hohe Frequenzen durch den leichten Luftstrom. 		Pegelauslastung bei ca. 90%. Klares Signal von mittlerer bis guter Qualität.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Sprachsignal - schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Sprachsignal-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Sprachsignal-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Sprachsignal-FFT.JPG">
+  <p>
+    Hoher Anteil aller Frequenzen in Spektrum. Das Spektrum weist eine rauschähnliche Signatur auf. Pegelauslastung bei 	nahezu 100%. Das Signal hat aufgrund der vielen Stöhr-Frequenzen stark an Qualität verloren.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Sprachsignal - Pegeldarstellung - Gegenüberstellung Still vs. Gering vs Schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Sprachsignal-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Sprachsignal-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Sprachsignal-Pegeldarstellung.JPG">
+  <p>
+    An der Pegelauslastung ist das Rauschen sehr gut zu erkennen. Immer höhere Amplituden-Werte deuten auf viele 		Stöhr-Frequenzen hin.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Sprachsignal - Waveform - Gegenüberstellung Still vs. Gering vs Schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Sprachsignal-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Sprachsignal-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Sprachsignal-Waveform.JPG">
+  <p>
+    Durch die Stöhr-Frequenzen ist die ursprüngliche Struktur des Signals sichtlich verfälscht. Bei zunehmendem 		Luftstrom wird das Sginal unruhiger. Bei starkem Luftstrom wirkt die Waveform "abgehackt" und unstimmig.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Sprachsignal - Spektrum - Gegenüberstellung Still vs. Gering vs Schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Sprachsignal-FFT.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Sprachsignal-FFT.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Sprachsignal-FFT.JPG">
+  <p>
+    Das Spektrum wird zunehmend durch ein weißes Rauschen ergänzt. Es ist klar erkennbar, dass durch den Luftstrom 		diverse Frequenzen das Spektrum ergänzen. Besonders im höheren Frequenz-Bereich ist ein signifikanter Anstieg zu	verzeichnen.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Impuls - keine Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Impuls-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Impuls-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Impuls-FFT.JPG">
+  <p>
+    Pegelauslastung ist optimal, da selbst beim initialen Anstieg der Amplitude zu Beginn des Impulses nichts 			abgeschnitten wird. Der Impuls-Verlauf ist in der Waveform klar erkennbar. Das Spektrum hat eine gleichmäßige 		Verteilung.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Impuls - geringe Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Impuls-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Impuls-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Impuls-FFT.JPG">
+  <p>
+    Pegelauslastung ist optimal, da selbst beim initialen Anstieg der Amplitude zu Beginn des Impulses nichts 			abgeschnitten wird. Der Impuls-Verlauf ist in der Waveform ebenfalls noch klar erkennbar. Das Spektrum hat noch 	immer eine relativ gleichmäßige Verteilung.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Impuls - schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Impuls-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Impuls-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Impuls-FFT.JPG">
+  <p>
+    Durch den Luftstrom ist der Impuls in der Aufnahme nicht direkt erkennbar. Der Impuls-Verlauf ist in der Waveform
+    ebenfalls allerdings noch erkennbar. Das Spektrum hat eine rauschartige Signatur und einen hohen Anteil an sehr 	tiefen Frequenzen.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Impuls - Pegeldarstellung - Gegenüberstellung Still vs. Gering vs Schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Impuls-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Impuls-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Impuls-Pegeldarstellung.JPG">
+  <p>
+    An der Pegelauslastung ist das Rauschen sehr gut zu erkennen. Immer höhere Amplituden-Werte deuten auf viele 		Stöhr-Frequenzen hin, bis der Impuls im Aufnahme-Verlauf kaum mehr zu sehen ist.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Impuls - Waveform - Gegenüberstellung Still vs. Gering vs Schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Impuls-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Impuls-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Impuls-Waveform.JPG">
+  <p>
+    Der Impuls-Verlauf ist bei keinem sowie geringem Luftstrom Klar erkennbar und nimmt recht schnell in typischer Form 	ab. Bei starkem Luftstrom ist sein Verlauf allerdings von anderer Form und nimmt langsamer ab bzw. erhält seine 	Amplitude länger, als unter reinen Bedingungen.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.7 * - Dynamische Mikrophon-Aufzeichnung</h1>  
+  <p>Impuls - Spektrum - Gegenüberstellung Still vs. Gering vs Schnelle Bewegung</p>
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Still-Impuls-FFT.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Langsam-Impuls-FFT.JPG">
+  <img src="./Uebung-1/Aufgabe-1-7-Dynamische-Mikrophonaufzeichnung/Schnell-Impuls-FFT.JPG">
+  <p>
+    Das Spektrum ist trotz des Luftstroms kaum verändert. Es handelt sich in jedem Fall um eine rauschartige Signatur.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>fehlt noch</p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Aufgezeichnetes Signal - Original - Unverändert</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Waveform-Webeditor.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Spektrum.JPG">
+  <p>
+    Der Pegel wird gut ausgelastet und das Signal hat eine gute Qualität. Das erste Bild stellt die Aufnahme im Web-	Editor dar. Der rosa markierte Bereich ist der analysierte Bereich.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Aufgezeichnetes Signal - Hohe Frequenzen abgeschnitten</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Webeditor-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <p>
+    Im Editor wurde ein Hochpass-Filter genutzt, um die Hohen-Frequenz-Anteile zu veringern.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Aufgezeichnetes Signal - Hohe Frequenzen abgeschnitten</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <p>
+    Im Spektrum ist eine klare Abnahme der hohen Frequenzen erkennbar. Die Waveform zeigt klar die nicht mehr optimale  	Pegel-Auslastung. Das Spektrum ist klar um hohe Frequenzen verringert.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Gegenüberstellung - Pegeldarstellung - Hohe Frequenzen abgeschnitten</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Pegeldarstellung.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <p>
+    Der Pegel ist durch die Abnahme des Anteils von hohen Frequenzen sichtlich in seiner Amplitude gesunken. Das Signal 	ist schwächer.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Gegenüberstellung - Waveform - Hohe Frequenzen abgeschnitten</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Waveform.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <p>
+    Die Waveform des abgeschnittenen Signals ist signifikant schwächer geworden. Amplituden-Ausschläge fallen im 		Vergleich sehr gering aus.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Gegenüberstellung - Spektrum - Hohe Frequenzen abgeschnitten</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Spektrum.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <p>
+    Der Hochpassfilter hat den hohen Frequenzbereich klar verringert. Durch Ungenauigkeit und Abnahme der gesamten 		Amplituden-Werte, ist aber auch das tiefe Spektrum verringert worden. Dies lässt sich z.B. durch einen schlechten 	  Filter-Algorithmus zurückführen.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Aufgezeichnetes Signal - Tiefe Frequenzen vermindert</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Webeditor-Verstaerkte-Hohe-Frequenzen.JPG">
+  <p>
+    Im Editor wurde ein Pass-Filter genutzt, um die Tiefen-Frequenz-Anteile zu veringern.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Aufgezeichnetes Signal - Tiefe Frequenzen vermindert</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Verstaerkt-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Verstaerkt-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Verstaerkt-Hohe-Frequenzen.JPG">
+  <p>
+    Die tiefen Frequenz-Werte haben sichtlich abgenommen, hohe Frequenzen bleiben erhalten.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Aufgezeichnetes Signal - Tiefe Frequenzen vermindert - Hohe Frequenzen verstärkt</p>
+  <p>Im Editor wurde das gesamte Signal durch eine Amplituden-Modulation verstärkt.</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
+  <p>
+    Die tiefen Frequenz-Werte haben sichtlich abgenommen, aber durch die erneute Anhebung der Amplitude wieder an 		stärke zugenommen.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Gegenüberstellung - Tiefe Frequenzen vermindert - Hohe Frequenzen verstärkt vs Original</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Spektrum.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
+  <p>
+    Der verwendete Filter und die Anhebung der Amplituden-Werte im Web-Editor hat leider nicht das gewünschte Resultat	  erreicht. Ursache des Problem ist, dass die verwendeten Analyse-Tools die vom Editor und Quelldatei festgelegten 		Abtastraten nicht unterstützen.
+  </p>
+</div>
 
 
 
