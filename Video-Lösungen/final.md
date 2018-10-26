@@ -98,7 +98,6 @@ Rechts: YUV Streuungsdiagramm
 
 An den Stellen im Bild, wo Metallverbindungen zu sehen sind, ist das Bild heller (Y-235). Bei den Löchern / dunkleren Stellen ist der Wert geringer (Y-16). 
 Beim Bild des groben Gitters, ist zu erkennen, dass diese Helligkeitswelle eine größere "Wellenlänge" besitzt.
-Das Bild der gleichmäßig weißen fläche hat keine solche Luminanzwelle.
 
 Feinmaschige Gitter stellen sich ähnlich dar, jedoch mit einer kleineren "Wellenlänge".
 
@@ -108,24 +107,25 @@ Feinmaschige Gitter stellen sich ähnlich dar, jedoch mit einer kleineren "Welle
 ![Feinmaschiges Gitter - YUV Diagramm](./1.4/gitter-fein/YUV.png){ height=150px }
 ![Feinmaschiges Gitter - Luminanzkurve](./1.4/gitter-fein/luminanz.png){ height=150px }
 
-\ 
+\pagebreak
 
+Das Bild der gleichmäßig weißen Wand hat keine solche Luminanzwelle.
 
-Links: Foto einer weißen Wand
+![Weiße Fläche - Screenshot](./1.4/weiße-fläche/screenshot.png){ height=250px }
 
-Mitte: Luminanz Streuungsdiagramm
+Links: Luminanz Streuungsdiagramm
 
 Rechts: YUV Streuungsdiagramm
 
 \ 
 
-![Weiße Fläche - Screenshot](./1.4/weiße-fläche/screenshot.png){ height=150px }
-![Weiße Fläche - Luminanzkurve](./1.4/weiße-fläche/luminanz.png){ height=150px }
-![Weiße Fläche - YUV Streuung](./1.4/weiße-fläche/streuung.png){ height=150px }
+![Weiße Fläche - Luminanzkurve](./1.4/weiße-fläche/luminanz.png){ height=240px }
+![Weiße Fläche - YUV Streuung](./1.4/weiße-fläche/streuung.png){ height=240px }
 
 \ 
 
-Der Luminanzwert ist durchgängig bei 235. Außerdem ist die Luminanzstreuung geringer. Im rechten Bild kann man gut erkennen, dass die Werte kaum vom Höhepunkt abweichen; was auf ein gleichmäßig helles und farbiges Bild schließen lässt.
+Der Maximalluminanzwert ist durchgängig bei Y-235. Außerdem ist die Luminanzstreuung geringer als bei den Gitter Aufnahmen.
+Im rechten Bild kann man gut erkennen, dass die Werte kaum vom Höhepunkt abweichen; was auf ein gleichmäßig helles und farbiges Bild schließen lässt.
 
 \pagebreak
 
@@ -136,21 +136,21 @@ Die richtige Blendeneinstellung zu finden war fast unmöglich.
 Um ein optimales Bild zu erzeugen müsste man entweder den Innenraum stark ausleuchten oder im Postprocessing den Luminanzraum mithilfe von HDR verringern.
 Gut zu erkennen ist dieses Phenomen hier:
 
-![Foto der Innenseite eines Fensters](./1.4/fenster-innen/screenshot.png){ height=150px }
+![Foto der Innenseite eines Fensters](./1.4/fenster-innen/screenshot.png){ height=250px }
 
 Es lässt sich erahnen, dass der Helligkeitswert der Wände links und rechts zu niedrig sind für ein ausgeglichenes Bild. Dies spiegelt sich wiederum in der Luminanzkurve wieder.
 
-![Fensterinnenseite - Luminanzkurve](./1.4/fenster-innen/luminanz.png){ height=150px }
+![Fensterinnenseite - Luminanzkurve](./1.4/fenster-innen/luminanz.png){ height=250px }
 
-Wie zu erwarten kann man man links und rechts auf dem Graphen Werte von unter Y-32 ablesen. Dies bestätigt meine Annahme.
+Wie zu erwarten, kann man man links und rechts auf dem Graphen Werte von unter Y-32 ablesen. Dies bestätigt meine Annahme.
 
 \pagebreak
 
 Bei Fenstern die von außen fotografiert werden kann man das genaue Gegenteil beobachten. Dort sind nämlich die Außenwände (besonders bei Sonnenbestrahlung) heller als der Raum hinter dem Fenster.
 
-![Foto der Außenseite eines Fensters](./1.4/fenster-außen/Fenster.jpg){ height=150px }
+![Foto der Außenseite eines Fensters](./1.4/fenster-außen/Fenster.jpg){ height=250px }
 
-![Fenseraußenseite- Luminanzkurve](./1.4/fenster-außen/luminanz.png){ height=150px }
+![Fenseraußenseite- Luminanzkurve](./1.4/fenster-außen/luminanz.png){ height=250px }
 
 Man kann gut erkennen wie der weiße Fensterrahmen sich in der Kurve vom Rest abhebt.
 Die eigentlichen Fenster sind so dunkel, dass man den Innenraum gar nicht mehr erkennen kann. 
@@ -166,16 +166,27 @@ Fotografie in solchen Gängen ist ebenfalls, wie beim Fenster, schwierig.
 Die Deckenlampen in diesem Gang sind wesentlich heller als alles andere in der Komposition. 
 Ich versuchte einen Mittelwert zwischen der Helligkeit der Lampen und dem Rest des Ganges zu finden.
 
-![Langer Gang - Foto](./1.4/langer-gang/screenshot.png){ height=130px }
-
-![Langer Gang - Farbstreuung](./1.4/langer-gang/farbstreuung.png){ height=130px }
-
-![Langer Gang - YUV Diagramm](./1.4/langer-gang/YUV.png){ height=130px }
+![Langer Gang - Foto](./1.4/langer-gang/screenshot.png){ height=250px }
 
 Im mittleren Bild sieht man wie zum Beispiel das blaue Treppenschild oben rechts direkt einen Einschlag im Farbstreuungsdiagramm hervorruft. Der weiße Graph schlägt stark in richtung Farbe des Schildes aus.
 
+![Langer Gang - Farbstreuung](./1.4/langer-gang/farbstreuung.png){ height=170px }
+![Langer Gang - YUV Diagramm](./1.4/langer-gang/YUV.png){ height=170px }
+
 \pagebreak
 
-## Aufgabe 1.5
+## Aufgabe 1.6
 
-### 
+### Analyse von Aufnahmen mit Bewegtmotiven
+
+Das Bild ist gestochen scharf. Kanten sind nicht verwaschen.
+
+![Statisches Motiv](./1.6/stillstand/img.png){ height=170px }
+
+Der Körper ist leicht verschwommen. Die Bild-/Signalqualität sinkt.
+
+![Langsam Bewegenes Motiv](./1.6/gemütlicher-gang/img.png){ height=170px }
+
+Das Motiv kann nur noch erahnt werden. Details sind stark verwaschen. Die Bildqualität ist stark gesunken.
+
+![Schnell Bewegenes Motiv](./1.6/schneller-gang/img.png){ height=170px }
