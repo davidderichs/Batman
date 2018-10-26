@@ -43,7 +43,8 @@ Die vom Bildschirm abgefilmten Testbilder weichen definitiv stark von den generi
 
 \ 
 
-Anhand der Luminanzkurve kann man außerdem erkennen, dass in den gefilmten Bildsignalen durch die Aufnahme einiges an Rauschen entstand. Erkennbar ist dies an der Körnung der Luminanzkurve.
+Anhand der Luminanzkurve kann man außerdem erkennen, dass in den gefilmten Bildsignalen durch die Aufnahme einiges an Rauschen entstand. 
+Erkennbar ist dies an der Körnung der Luminanzkurve. Die Verformung in dieser lässt auf ein schlechteres Bild als das generierte schließen.
 
 Gerade beim roten und blauen Testbild kann man beobachten dass der Bildschirm die Farben nicht originalgeträu wiedergibt.
 Im abgefilmten Bild sind deutlich mehr Fremdfarben zu erkennen (zb. Rot RGB[255, 000, 000] sollte nur Rot enthalten).
@@ -53,6 +54,24 @@ Diese sind nämlich höher als 128 (Pures, farbloses Weiß) und das Bild besitzt
 ![Bildschirmfotografie - Weiß - YUV Diagramm](./1.3/weiß/YUV.png){ height=170px }
 
 Leider habe ich den Weißabgleich vor der Bildschirmaufnahme falsch verwendet, deshalb ist der Luminanz-Wert bei Y-173 (Beim weißen Testbild) statt bei den gewünschten Y-235.
+
+\pagebreak
+
+### Vergleich der generierten Testbilder mit den vom Bildschirm abfotografierten
+
+Die abfotografierten Testbilder unterscheiden sich stark von den generierten Testbildern.
+Gründe dafür sind unter anderem Verfärbungen des Monitors (die durch einen Weißabgleich jedoch verbessert werden könnten), Verschmutzung des Panels (Staub, Fingerabdrücke, ...), geringer Blickwinkel und vor allem die schlechte Wiedergabe des Farbraums. 
+Farben erscheinen auf dem Monitor weniger Kontrastreich und mit weniger Sättigung als generierte Bilder.
+
+Hier nochmal als direkt Vergleich:
+
+![Bildschirmfotografie - Blau](./1.3/blau/blau.png){ height=170px }
+![Blau - Luminanzkurve](./1.3/blau/YUV.png){ height=170px }
+
+![Generiertes Blau](./1.2/blau/blau.png){ height=170px }
+![Generiertes Blau - Luminanzkurve](./1.2/blau/YUV.png){ height=170px }
+
+Je weniger Kurven / Zacken sich im YUV Diagramm befinden, desto besser ist die Signalqualität / die Qualität des Bildes.
 
 \pagebreak
 
@@ -78,8 +97,19 @@ Rechts: YUV Streuungsdiagramm
 \ 
 
 An den Stellen im Bild, wo Metallverbindungen zu sehen sind, ist das Bild heller (Y-235). Bei den Löchern / dunkleren Stellen ist der Wert geringer (Y-16). 
-Beim Bild des groben Gitters, ist zu erkennen, dass diese Helligkeitswelle einen größeren Wellenabstand besitzt.
+Beim Bild des groben Gitters, ist zu erkennen, dass diese Helligkeitswelle eine größere "Wellenlänge" besitzt.
 Das Bild der gleichmäßig weißen fläche hat keine solche Luminanzwelle.
+
+Feinmaschige Gitter stellen sich ähnlich dar, jedoch mit einer kleineren "Wellenlänge".
+
+\ 
+
+![Feinmaschiges Gitter](./1.4/gitter-fein/gitter.png){ height=150px }
+![Feinmaschiges Gitter - YUV Diagramm](./1.4/gitter-fein/YUV.png){ height=150px }
+![Feinmaschiges Gitter - Luminanzkurve](./1.4/gitter-fein/luminanz.png){ height=150px }
+
+\ 
+
 
 Links: Foto einer weißen Wand
 
