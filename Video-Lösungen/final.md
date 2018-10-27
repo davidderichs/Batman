@@ -190,3 +190,19 @@ Der Körper ist leicht verschwommen. Die Bild-/Signalqualität sinkt.
 Das Motiv kann nur noch erahnt werden. Details sind stark verwaschen. Die Bildqualität ist stark gesunken.
 
 ![Schnell Bewegenes Motiv](./1.6/schneller-gang/img.png){ height=170px }
+
+\pagebreak
+
+#### Analyse und Begründung der Sicht-/Messergebnisse
+
+Durch die langsame Abtastung des Bildes (Geringer Shutterspeed mit geringer Bildrate), verschmelzen Teilbilder des Videos miteinander.
+
+Die Bildqualität lässt sich ebenfalls anhand des YUV Diagramms messen. Je breiter und stumpfer der Ausschlag auf den Graphen ist, desto stärker ist die Bildverwischung.
+
+![Statisches Motiv](./1.6/stillstand/YUV.png){ height=170px }
+![Schnell Bewegenes Motiv](./1.6/schneller-gang/YUV.png){ height=170px }
+
+Links zu sehen sind die Graphen des scharfen, stillstehenden Bildes. 
+Rechts das stark verschwommene. 
+Beide haben in der Mitte den erwähnten Ausschlag. 
+(Das Motiv) Die höheren Werte links und rechts ergeben sich aus der weißen Wand im Hintergrund.
