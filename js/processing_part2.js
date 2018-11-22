@@ -15,7 +15,7 @@ function processingVideoGenCosinus() {
 	var	horizontalFrequency  = parseFloat(document.getElementById("In1").value);
 	// Process chain begin   
 	
-	genCosinus(BridnessSamples, horizontalFrequency,cw,128);
+	genCosinus(BridnessSamples, horizontalFrequency,cw,256);
 	GRAYtoRGB(imgArrayOut, BridnessSamples);   // Lösung 1.1a
 	// Process chain end  
 	writeCanvas(iImageOut);
@@ -24,8 +24,18 @@ function processingVideoGenCosinus() {
 }
 
 function genCosinus(iOutput, iHorizontalFrequency, iSampleRate, iOffset) {
-
+	
+o = new Array(iOutput.length*4);
+for(i=0;i<iOutput.length;i++){
+v = (iOffset-0.5) * Math.cos(2*Math.PI*(iHorizontalFrequency/iSampleRate)*i)+ (iOffset-0.5);
+o[i*4.0] = v;
+o[(i*4.0)+1] = v;
+o[(i*4.0)+2] = v;
+o[(i*4.0)+3] = v;
 }
+RGBtoGRAY(iOutput, o);
+}
+
 
 function processingVideoBridnessContrast() {
 var contrast =pegel( parseFloat(document.getElementById("In1").value));
@@ -48,7 +58,7 @@ function  db(wert) {
 
 }
 
-function setAmplitude(iOutput, iInput, iAplitude) {  
+function setAmplitudeVideo(iOutput, iInput, iAplitude) {  
 
 }
 
@@ -96,7 +106,14 @@ function processingVideoTP10() {
 }
 
 function setTP1O1D(iOutput, iInput) {  
+for (i=0;i<iInput.length;i++){
+	if(i==0){
+		iOutput[i]=(0.25*iInput[i])+(0.25*iInput[i+128]);
+	}else{
+		iOutput[i]=(0.25*iInput[i])+(0.25*iInput[i-1])+(0.25*iInput[i+127])+(0.25*iInput[i+128]);
+	}
 
+}
 }
 
 function processingVideoTP20() { 

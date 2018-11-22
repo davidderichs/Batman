@@ -285,8 +285,79 @@
 ---
 
 <div>
-  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen - Gegenüberstellung</h1>  
-  <p>fehlt noch</p>
+  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen mit Hintergrundsignalen</h1>  
+  <p>Sprachsignal - keine Hintergrundsignale</p>
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM2_standard_Pegel.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM2_standard_Wave.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM2_standard_FFT.png">
+  <p>
+    Gute Pegelauslastung, kompakter Frequenzbereich des Sprachsignals sichtbar
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen mit Hintergrundsignalen</h1>  
+  <p>Sprachsignal - geringe Hintergrundsignale</p>
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_1_Pegel.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_1_Wave.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_1_FFT.png">
+  <p>
+    Gute Pegelauslastung, Rauschpegel ist angestiegen, Frequenzbereich des Sprachsignals durch Hintergrundfrequenzen vergrößert
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen mit Hintergrundsignalen</h1>  
+  <p>Sprachsignal - viele Hintergrundsignale</p>
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_2_Pegel.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_2_Wave.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_2_FFT.png">
+  <p>
+    Hohe Pegelauslastung, Rauschpegel ist weiter angestiegen, mehr und größere Amplituden, Frequenzbereich des Sprachsignals durch Hintergrundfrequenzen nicht mehr erkennbar
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen mit Hintergrundsignalen</h1>  
+  <p>Sprachsignal - Pegel - Gegenüberstellung keine vs. geringe vs. viele Hintergrundsignale </p>
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM2_standard_Pegel.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_1_Pegel.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_2_Pegel.png">
+  <p>
+    Anstieg des durchschnittlichen Grundpegels lässt sich auf den Anstieg der Hintergrundsignale zurückführen.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen mit Hintergrundsignalen</h1>  
+  <p>Sprachsignal - Waveform - Gegenüberstellung keine vs. geringe vs. viele Hintergrundsignale</p>
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM2_standard_Wave.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_1_Wave.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_2_Wave.png">
+  <p>
+    Hintergrundsignale sind auf der Waveform nicht direkt erkennbar, höchstens durch die ansteigende Größe der Amplituden.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.6 * - Aufnahme von Sprachsignalen mit Hintergrundsignalen</h1>  
+  <p>Sprachsignal - Spektrum - Gegenüberstellung keine vs. geringe vs. viele Hintergrundsignale</p>
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM2_standard_FFT.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_1_FFT.png">
+  <img src="./Uebung-1/Aufgabe-1-6-Aufnahme-Sprachsignale-Mit-Hintergrundsignalen/EM_verkehr_2_FFT.png">
+  <p>
+    Die Hintergrundsignale erweitern das Frequenzspektrum deutlich. Auch im Bereich des Sprachsignals ist ein Frequenzanstieg zu verzeichnen, wodurch das Sprachsignal überdeckt wird und nicht mehr klar sichtbar ist.
+  </p>
 </div>
 
 ---
@@ -450,7 +521,156 @@
 
 <div>
   <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
-  <p>fehlt noch</p>
+  <p>Sprachsignal - schalltoter Raum</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_standard_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_standard_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_standard_FFT.png">
+  <p>
+    Gute Pegelauslastung, gleichmäßige Amplituden, Sprachfrequenzbereich klar erkennbar
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Sprachsignal - mäßiger Reflextionsraum</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_1_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_1_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_1_FFT.png">
+  <p>
+    Gute Pegelauslastung, im ersten Drittel sich wiederholende Amplituden klar erkennbar, Sprachfrequenzbereich klar erkennbar
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Sprachsignal - hoher Reflextionsraum</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_2_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_2_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_2_FFT.png">
+  <p>
+    Gute Pegelauslastung, unregelmäßiger Amplitudenverlauf, Sprachfrequenzbereich klar erkennbar
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Sprachsignal - Pegel - Gegenüberstellung keine vs. mäßige vs hohe Reflexion</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_standard_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_1_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_2_Pegel.png">
+  <p>
+    Je größer der Halleffekt, desto unregelmäßiger wird der Pegelverlauf.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Sprachsignal - Waveform - Gegenüberstellung keine vs. mäßige vs hohe Reflexion</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_standard_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_1_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_2_Wave.png">
+  <p>
+    Mit der Zunahme der Signalreflexion werden die Amplituden immer unregelmäßiger. 
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Sprachsignal - Spektrum - Gegenüberstellung keine vs. mäßige vs hohe Reflexion</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_standard_FFT.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_1_FFT.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/EM2_hall_2_FFT.png">
+  <p>
+    Der Frequenzbereich verändert sich nicht.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Impuls - schalltoter Raum</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_standard_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_standard_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_standard_FFT.png">
+  <p>
+    Gute Pegelauslastung, Impuls klar ersichtlich, gleichmäßige Amplituden, großes Frequenzspektrum
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Impuls - mäßiger Reflexionsraum</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_1_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_1_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_1_FFT.png">
+  <p>
+    Gute Pegelauslastung, Impuls klar ersichtlich, gebündelte Amplituden direkt nach dem Impuls sichtbar, großes Frequenzspektrum
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Impuls - hoher Reflexionsraum</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_2_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_2_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_2_FFT.png">
+  <p>
+    Gute Pegelauslastung, Impuls klar ersichtlich, gebündelte Amplituden nach dem Impuls, großes Frequenzspektrum
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Impuls - Pegel - Gegenüberstellung keine vs. mäßige vs hohe Reflexion</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_standard_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_1_Pegel.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_2_Pegel.png">
+  <p>
+    Kein wesentlicher Unterschied erkennbar
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Impuls - Waveform - Gegenüberstellung keine vs. mäßige vs hohe Reflexion</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_standard_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_1_Wave.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_2_Wave.png">
+  <p>
+    Je größer die Reflexion umso stärker überlappen/ bündeln sich die Amplituden 
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.8 * - Aufnahme in unterschiedlichen akustischen Räumen</h1>  
+  <p>Impuls - Spektrum - Gegenüberstellung keine vs. mäßige vs hohe Reflexion</p>
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_standard_FFT.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_1_FFT.png">
+    <img src="Uebung-1/Aufgabe-1-8-Aufnahme-in-unterschiedlichen-akustischen-Raeumen/IM_hall_2_FFT.png">
+  <p>
+    Frequenzspektrum ändert sich nicht.
+  </p>
 </div>
 
 ---
@@ -458,12 +678,10 @@
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
   <p>Aufgezeichnetes Signal - Original - Unverändert</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Waveform-Webeditor.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Pegeldarstellung.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Waveform.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Spektrum.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Waveform-WebEditor-Verstaerkt.JPG">
+  <br><br>
   <p>
-    Der Pegel wird gut ausgelastet und das Signal hat eine gute Qualität. Das erste Bild stellt die Aufnahme im Web-	Editor dar. Der rosa markierte Bereich ist der analysierte Bereich.
+    Der Pegel des Signals wurde mit der Funktion "Amplify" verstaerkt, um eine gute Auslasung zu erreichen.
   </p>
 </div>
 
@@ -471,10 +689,12 @@
 
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
-  <p>Aufgezeichnetes Signal - Hohe Frequenzen abgeschnitten</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Webeditor-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <p>Aufgezeichnetes Signal - Original - Unverändert</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Pegel-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Waveform-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Spektrum-Verstaerkt.JPG">
   <p>
-    Im Editor wurde ein Hochpass-Filter genutzt, um die Hohen-Frequenz-Anteile zu veringern.
+    Der Pegel wird gut ausgelastet und das Signal hat eine gute Qualität. Das Spektrum hat einen hohen Anteil tiefer 	Frequenzen. Dies wird auch durch die Waveform bzw. anhand der gut zu erkennenden langen Periodendauer ersichtlich.
   </p>
 </div>
 
@@ -482,10 +702,21 @@
 
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
-  <p>Aufgezeichnetes Signal - Hohe Frequenzen abgeschnitten</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Abgeschnitten-Hohe-Frequenzen.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Abgeschnitten-Hohe-Frequenzen.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <p>Tiefpassfilter - Hohe Frequenzen abgeschnitten</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Tiefpassfilter-WaveForm-WebEditor-Verstaerkt.JPG">
+  <p>
+    Im Editor wurde ein Tiefpass-Filter genutzt, um die Hohen-Frequenz-Anteile zu veringern bzw. abzuschneiden.
+  </p>
+</div>
+
+---
+
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Tiefpassfilter - Hohe Frequenzen abgeschnitten</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Tiefpassfilter-Pegel-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Tiefpassfilter-WaveForm-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Tiefpassfilter-Spektrum-Verstaerkt.JPG">
   <p>
     Im Spektrum ist eine klare Abnahme der hohen Frequenzen erkennbar. Die Waveform zeigt klar die nicht mehr optimale  	Pegel-Auslastung. Das Spektrum ist klar um hohe Frequenzen verringert.
   </p>
@@ -495,23 +726,11 @@
 
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
-  <p>Gegenüberstellung - Pegeldarstellung - Hohe Frequenzen abgeschnitten</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Pegeldarstellung.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Abgeschnitten-Hohe-Frequenzen.JPG">
-  <p>
-    Der Pegel ist durch die Abnahme des Anteils von hohen Frequenzen sichtlich in seiner Amplitude gesunken. Das Signal 	ist schwächer.
-  </p>
-</div>
-
----
-
-<div>
-  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
   <p>Gegenüberstellung - Waveform - Hohe Frequenzen abgeschnitten</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Waveform.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Waveform-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Tiefpassfilter-WaveForm-Verstaerkt.JPG">
   <p>
-    Die Waveform des abgeschnittenen Signals ist signifikant schwächer geworden. Amplituden-Ausschläge fallen im 		Vergleich sehr gering aus.
+    Die Waveform ist durch die Abnahme hohe Frequenzen klarer erkennbar. Die Periodenverläufe tiefer Frequenzen ist klar erkennbar.
   </p>
 </div>
 
@@ -520,10 +739,10 @@
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
   <p>Gegenüberstellung - Spektrum - Hohe Frequenzen abgeschnitten</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Spektrum.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Abgeschnitten-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Spektrum-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Tiefpassfilter-Spektrum-Verstaerkt.JPG">
   <p>
-    Der Hochpassfilter hat den hohen Frequenzbereich klar verringert. Durch Ungenauigkeit und Abnahme der gesamten 		Amplituden-Werte, ist aber auch das tiefe Spektrum verringert worden. Dies lässt sich z.B. durch einen schlechten 	  Filter-Algorithmus zurückführen.
+    Der Tiefpassfilter hat den hohen Frequenzbereich klar verringert/abgeschnitten. Im hohen Frequenz-Spektrum sind keine Werte messbar.
   </p>
 </div>
 
@@ -531,10 +750,10 @@
 
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
-  <p>Aufgezeichnetes Signal - Tiefe Frequenzen vermindert</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Webeditor-Verstaerkte-Hohe-Frequenzen.JPG">
+  <p>Hochpassfilter - Verstaerkung - Tiefe Frequenzen vermindert - Hohe Frequenzen verstaerkt</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Hochpassfilter-WaveForm-WebEditor-Verstaerkt.JPG">
   <p>
-    Im Editor wurde ein Pass-Filter genutzt, um die Tiefen-Frequenz-Anteile zu veringern.
+    Im Editor wurde ein Hochpass-Filter genutzt, um die Tiefen-Frequenz-Anteile zu veringern. Anschließend wurde das Signal verstärkt.
   </p>
 </div>
 
@@ -542,26 +761,12 @@
 
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
-  <p>Aufgezeichnetes Signal - Tiefe Frequenzen vermindert</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Verstaerkt-Hohe-Frequenzen.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Verstaerkt-Hohe-Frequenzen.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Verstaerkt-Hohe-Frequenzen.JPG">
+  <p>Hochpassfilter - Verstaerkung - Tiefe Frequenzen vermindert - Hohe Frequenzen verstaerkt</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Hochpassfilter-Pegel-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Hochpassfilter-WaveForm-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Hochpassfilter-Spektrum-Verstaerkt.JPG">
   <p>
-    Die tiefen Frequenz-Werte haben sichtlich abgenommen, hohe Frequenzen bleiben erhalten.
-  </p>
-</div>
-
----
-
-<div>
-  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
-  <p>Aufgezeichnetes Signal - Tiefe Frequenzen vermindert - Hohe Frequenzen verstärkt</p>
-  <p>Im Editor wurde das gesamte Signal durch eine Amplituden-Modulation verstärkt.</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Pegel-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Waveform-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
-  <p>
-    Die tiefen Frequenz-Werte haben sichtlich abgenommen, aber durch die erneute Anhebung der Amplitude wieder an 		stärke zugenommen.
+    Die tiefen Frequenz-Werte haben sichtlich abgenommen, hohe Frequenzen wurden verstärkt. die Waveform ist sichtbar "unruhiger".
   </p>
 </div>
 
@@ -570,15 +775,33 @@
 <div>
   <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
   <p>Gegenüberstellung - Tiefe Frequenzen vermindert - Hohe Frequenzen verstärkt vs Original</p>
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Original-Spektrum.JPG">
-  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/Spektrum-Amplified-Verstaerkt-Hohe-Frequenzen.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Waveform-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Hochpassfilter-Waveform-Verstaerkt.JPG">
   <p>
-    Der verwendete Filter und die Anhebung der Amplituden-Werte im Web-Editor hat leider nicht das gewünschte Resultat	  erreicht. Ursache des Problem ist, dass die verwendeten Analyse-Tools die vom Editor und Quelldatei festgelegten 		Abtastraten nicht unterstützen.
+    Die Zunahme hoher Frequenzen ist in der Waveform gut zu erkennen. Der periodische Verlauf ist bezogen auf tiefe Frequenzen nicht mehr so klar erkennbar und wird von den Interferenzen der hohen Frequenzbereiche überlagert.
   </p>
 </div>
 
+---
 
+<div>
+  <h1 style="font-size: 18pt">1.10 * - Manipulation von Audiosignalen</h1>  
+  <p>Gegenüberstellung - Tiefe Frequenzen vermindert - Hohe Frequenzen verstärkt vs Original</p>
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Original-Spektrum-Verstaerkt.JPG">
+  <img src="./Uebung-1/Aufgabe-1-10-Abschneiden-Verstaerken/2-Versuch/Hochpassfilter-Spektrum-Verstaerkt.JPG">
+  <p>
+    Der Anteil tiefer Frequenzbereiche hat klar abgenommen und wurde "gedämpft". Hohe Frequenzen haben in ihrer Ausprägung zugenommen. Da der Anteil hoher Frequenzen im Signal ohnehin nicht große war, ist die Zunahme der gemessenen Werte war sichtbar, aber nicht signifikant gestiegen.
+  </p>
+</div>
 
+<div>
+  <h1 style="font-size: 18pt">1.11 * - Produktionsumgebung</h1>  
+  <p>Signalflussplan</p>
+  <img src="./Uebung-1/Aufgabe-1-11/Signalflussplan.png">
+  <p>
+
+  </p>
+</div>
 
 
 
