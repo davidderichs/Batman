@@ -1,5 +1,5 @@
 /**
- * Created by Jürgen Lohr on 1.9.2016.
+ * Created by Jï¿½rgen Lohr on 1.9.2016.
  */
  
  function cutFirstLine(iOutput, iInput) {  
@@ -8,7 +8,7 @@
 	}
 }
 
-	//	---------------------------------------------------------------- Video -Lösung Ü2--------------------------------------------------------------
+	//	---------------------------------------------------------------- Video -Lï¿½sung ï¿½2--------------------------------------------------------------
 
 
 function processingVideoGenCosinus() {
@@ -16,7 +16,7 @@ function processingVideoGenCosinus() {
 	// Process chain begin   
 	
 	genCosinus(BridnessSamples, horizontalFrequency,cw,256);
-	GRAYtoRGB(imgArrayOut, BridnessSamples);   // Lösung 1.1a
+	GRAYtoRGB(imgArrayOut, BridnessSamples);   // Lï¿½sung 1.1a
 	// Process chain end  
 	writeCanvas(iImageOut);
 		
@@ -106,14 +106,13 @@ function processingVideoTP10() {
 }
 
 function setTP1O1D(iOutput, iInput) {  
-for (i=0;i<iInput.length;i++){
-	if(i==0){
-		iOutput[i]=(0.25*iInput[i])+(0.25*iInput[i+128]);
-	}else{
-		iOutput[i]=(0.25*iInput[i])+(0.25*iInput[i-1])+(0.25*iInput[i+127])+(0.25*iInput[i+128]);
+	for (i=0;i<iInput.length;i++){
+		if(i==0){
+			iOutput[i]=(0.25*iInput[i])+(0.25*iInput[i+128]);
+		}else{
+			iOutput[i]=(0.25*iInput[i])+(0.25*iInput[i-1])+(0.25*iInput[i+127])+(0.25*iInput[i+128]);
+		}
 	}
-
-}
 }
 
 function processingVideoTP20() { 
@@ -133,8 +132,19 @@ function processingVideoTP20() {
 	LogArray = ["imgArrayIn", "BridnessSamples", "TPsamples", "secondLineBridnessSamples", "secondLineTPsamples", "imgArrayOut"];
 }
 
-function setTP2O2D(iOutput, iInput) {  
-
+function setTP2O2D(iOutput, iInput) {
+    for (i=0;i<iInput.length;i++){
+		iOutput[i]=
+			(0.11*iInput[i])+
+			(0.11*iInput[i-1])+
+			(0.11*iInput[i+1])+
+			(0.11*iInput[i+127])+
+			(0.11*iInput[i-127])+
+			(0.11*iInput[i+128])+
+			(0.11*iInput[i-128])+
+			(0.11*iInput[i+129])+
+			(0.11*iInput[i+129]);
+    }
 }
 
 function processingVideoHP10() { 
@@ -162,8 +172,14 @@ function processingVideoHP10_cos64() {
 	LogArray = [ "BridnessSamples", "HPsamples", "imgArrayOut"];
 }
 
-function setHP1O1D(iOutput, iInput) {  
-
+function setHP1O1D(iOutput, iInput) {
+    for (i=0;i<iInput.length;i++){
+		iOutput[i]=
+			(0.25*iInput[i])+
+			(-(0.25*iInput[i-1]))+
+			(0.25*iInput[i+127])+
+			(0.25*iInput[i+128]);
+    }
 }
 
 function processingVideoHP10visuell() { 
@@ -197,8 +213,20 @@ function processingVideoHP20() {
 	
 	LogArray = ["imgArrayIn", "BridnessSamples", "HPsamples",  "secondLineBridnessSamples","secondLineHPsamples", "imgArrayOut"];
 }
-function setHP2O2D(iOutput, iInput) {  
-
+function setHP2O2D(iOutput, iInput) {
+ 	const faktor = -0.25;
+    for (i=0;i<iInput.length;i++){
+        iOutput[i]=
+            (faktor*(-16*iInput[i]))+
+            (faktor*(2*iInput[i-1]))+
+            (faktor*(2*iInput[i+1]))+
+            (faktor*iInput[i+127])+
+            (faktor*iInput[i-127])+
+            (faktor*(2*iInput[i+128]))+
+            (faktor*(2*iInput[i-128]))+
+            (faktor*iInput[i+129])+
+            (faktor*iInput[i+129]);
+    }
 }
 
 function processingVideoSoebel() { 
@@ -220,7 +248,7 @@ function setSoebel(iOutput, iInput) {
 
 }
 
-	//	---------------------------------------------------------------- Audio -Lösung Ü2--------------------------------------------------------------
+	//	---------------------------------------------------------------- Audio -Lï¿½sung ï¿½2--------------------------------------------------------------
 
 
 function processingAudioKlang(event) {  
