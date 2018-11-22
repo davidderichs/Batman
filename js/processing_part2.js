@@ -138,12 +138,12 @@ function setTP2O2D(iOutput, iInput) {
 			(0.11*iInput[i])+
 			(0.11*iInput[i-1])+
 			(0.11*iInput[i+1])+
-			(0.11*iInput[i+127])+
-			(0.11*iInput[i-127])+
-			(0.11*iInput[i+128])+
-			(0.11*iInput[i-128])+
-			(0.11*iInput[i+129])+
-			(0.11*iInput[i+129]);
+			(0.11*iInput[i+(cw-1)])+
+			(0.11*iInput[i-(cw-1)])+
+			(0.11*iInput[i+cw])+
+			(0.11*iInput[i-cw])+
+			(0.11*iInput[i+(cw+1)])+
+			(0.11*iInput[i-(cw+1)]);
     }
 }
 
@@ -174,11 +174,11 @@ function processingVideoHP10_cos64() {
 
 function setHP1O1D(iOutput, iInput) {
     for (i=0;i<iInput.length;i++){
-		iOutput[i]=
-			(0.25*iInput[i])+
-			(-(0.25*iInput[i-1]))+
-			(0.25*iInput[i+127])+
-			(0.25*iInput[i+128]);
+    	if(i==0){
+            iOutput[i]= iInput[i];
+		} else {
+            iOutput[i]= (0.5*iInput[i])-(0.5*iInput[i-1]);
+		}
     }
 }
 
@@ -220,12 +220,12 @@ function setHP2O2D(iOutput, iInput) {
             (faktor*(-16*iInput[i]))+
             (faktor*(2*iInput[i-1]))+
             (faktor*(2*iInput[i+1]))+
-            (faktor*iInput[i+127])+
-            (faktor*iInput[i-127])+
-            (faktor*(2*iInput[i+128]))+
-            (faktor*(2*iInput[i-128]))+
-            (faktor*iInput[i+129])+
-            (faktor*iInput[i-129]);
+            (faktor*iInput[i+(cw-1)])+
+            (faktor*iInput[i-(cw-1)])+
+            (faktor*(2*iInput[i+cw]))+
+            (faktor*(2*iInput[i-cw]))+
+            (faktor*iInput[i+(cw+1)])+
+            (faktor*iInput[i-(cw+1)]);
     }
 }
 
