@@ -678,7 +678,7 @@ function genColourArea(iOutput, iR,iG,iB) {
     }
 }
 function GRAYtoRGB(iOutput, iInput) {  
-    let x = 0;
+    x = 0;
     for(i = 0; i < iInput.length; i++){
         iOutput[x] = iInput[i]
         iOutput[x + 1] = iInput[i]
@@ -827,7 +827,7 @@ function processingAudioMono(event) {
 	LogArray = ["monoSamples"];  
 }  
 function StereoToMono(iOutput, iInput) { 
-	for (var i=0; i<iOutput.length; i++){
+	for (i=0; i<iOutput.length; i++){
 	    iOutput[i]=iInput.r[i]+iInput.l[i]/2;
     }
 }
