@@ -195,6 +195,7 @@ function setHP1O1D(iOutput, iInput) {
             iOutput[i]= iInput[i];
 		} else {
             iOutput[i]= (0.5*iInput[i])-(0.5*iInput[i-1]);
+			// iOutput[i] = iInput[i];
 		}
     }
 }
@@ -211,8 +212,14 @@ function processingVideoHP10visuell() {
 
 	LogArray = ["imgArrayIn", "BridnessSamples", "HPsamples", "imgArrayOut"];
 }
-function setHP1Ovisuell(iOutput, iInput) {  
-
+function setHP1Ovisuell(iOutput, iInput) {
+    for (i=0;i<iInput.length;i++){
+        if(i==0){
+            iOutput[i]= iInput[i];
+        } else {
+            iOutput[i]= (0.5*iInput[i])-(0.5*iInput[i-1]);
+        }
+    }
 }
 
 function processingVideoHP20() { 

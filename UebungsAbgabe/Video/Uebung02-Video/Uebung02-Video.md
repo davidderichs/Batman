@@ -133,21 +133,90 @@
 ---
 
 <div>
-  <h1>2.4 Chroma-Keying</h1>
-  <img src="./2-3/FarbwertBestimmt.JPG">
-  <p>Der zu ersetzende Farbwert ist RGB(52, 82, 161)</p>
-  <img src="./2-3/FarbwertErsetzt.JPG">
-  <p>Durch Chroma-Keying wird der definierte Farbwert mit einer gewissen Toleranz durch Alpha=0 dargestellt (Transparenz). Der Hintergrund wird sichtbar.</p>
+  <h1>2.4 Weichzeichner / Schärfung</h1>
+  <p>2.4 i. Eigenes Asset - Feines Gitter:</p>
+  <img src="./2-4/EigenesAssetFeinesGitter.JPG">
+  <p>Die Werte-Abweichungen sind im ersten Beispiel sehr schlecht, wordurch z.B. ein Hochpass-Filter keine guten Ergebnisse erzielen kann. Wir haben uns dazu entschieden ein anderes eigenes Asset für die folgenden Analysen zu verwenden.</p>
+  <img src="./2-4/EigenesAssetFeinesGitterBesser.JPG">
 </div>
 
 ---
 
+<div>
+  <h1>2.4 Weichzeichner / Schärfung</h1>  
+    <p>2.4 ii. Weichzeichner Tiefpass 1. Ordnung eindimensional</p>
+  <img src="./2-4/TP10Weichzeichner.JPG">  
+  <p>2.4 iii. Scharfzeichner - Hochpass 1. Ordnung eindimensional</p>
+  <img src="./2-4/HP10Scharfzeichner.JPG">  
+</div>
 
+---
 
+<div>
+  <h1>2.4 Weichzeichner / Schärfung</h1>  
+    <p>2.4 iv. Weichzeichner Gauß Tiefpass 2. Ordnung zweidimensional</p>
+  <img src="./2-4/TP20Weichzeichner.JPG">  
+  <p>2.4 v. Scharfzeichner Gauß - Hochpass 2. Ordnung zweidimensional</p>
+  <img src="./2-4/HP20Scharfzeichner.JPG">  
+</div>
 
+---
 
+<div>
+  <h1>2.4 Weichzeichner / Schärfung</h1>  
+  <p>2.4 vi. Auswertung / Messung - Original</p>
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/OriginalTestbereich.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/OriginalRGBFrequenzgang.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/OriginalFFTSpektrum.JPG">
+  <p>Klare Struktur erkennbar. Muster in Spektrum ersichtlich. Frequenzgang ist rechtecking, dem Gitter entsprechend.</p>
+  
+  <p>2.4 vi. Auswertung / Messung - Tiefpass 1. Ordnung eindimensional (Weichzeichner)</p>
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/TP10Testbereich.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/TP10RGBFrequenzgang.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/TP10FFTSpektrum.JPG">
+  <p>Struktur durch langsamere Übergaenge gekenntzeichnet. Steigung und Abfall der Grau-Werte nicht mehr so steil.Muster in Spektrum aber noch immer   
+     ersichtlich.</p>
+  
+  <p>2.4 vi. Auswertung / Messung - Hochpass 1. Ordnung eindimensional (Scharfzeichner)</p>
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/HP10Testbereich.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/HP10RGBFrequenzgang.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/HP10FFTSpektrum.JPG">  
+  <p>Durch die Darstellung der "Differenzierung" sind im Frequenzgang nur Starke Differenzen erkennbar. Im Spektrum lässt sich die Struktur aber dennoch 
+     erkennen.</p>
+</div>
 
+---
 
+<div>
+  <h1>2.4 Weichzeichner / Schärfung</h1>    
+  <p>2.4 vi. Auswertung / Messung - Tiefpass 2. Ordnung zweidimensional (Gauß'scher Weichzeichner)</p>
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/TP20Testbereich.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/TP20RGBFrequenzgang.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/TP20FFTSpektrum.JPG">
+  <p>Struktur durch langsamere Übergaenge gekenntzeichnet. Steigung und Abfall der Grau-Werte nicht mehr so steil.Muster in Spektrum aber noch immer   
+     ersichtlich.</p>
+  
+  <p>2.4 vi. Auswertung / Messung - Hochpass 2. Ordnung zweidimensional (Gauß'scher Scharfzeichner)</p>
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/HP20Testbereich.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/HP20RGBFrequenzgang.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-4/Auswertung/HP20FFTSpektrum.JPG">  
+  <p>Konturen und Linien sind sehr viel klarer voneinander abgehoben. Abfall und Steigung zwischen den Linien ist steiler als im Original bzw. dem Weichzeichner. 
+     Muster in Spektrum aber noch immer ersichtlich. Fragmente sind ebenfalls stärker hervorgehoben.</p>
+</div>
+
+---
+
+<div>
+  <h1>2.5 Soebel-Filter</h1>  
+  <p>2.5 1. Soebelfilter in Webanwendung:</p>
+  <img src="./2-5/SoebelFilter.JPG">
+  <p>2.5 2. Soebelfilter Auswertung / Messung:</p>
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-5/SoebelTestbereich.JPg">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-5/SoebelRGBFrequenzgang.JPG">
+  <img style="display:inline-block; height: 200px; width: 200px" src="./2-5/SoebelFFTSpektrum.JPG"> 
+  <p>Der Soebel-Filter hat die Konturen korrekt herausgearbeitet. Die Struktur des Gitters ist sehr gut erkennbar. Der Frequenzgang zeichnet sich durch sehr 
+     steile Grau-Wert-Abfälle bzw. Steigungen aus. Dies ist durch den hohen Kontrast bzw. wertebedingten Unterschiede zu erklären.</p>
+</div>
 
 
 
