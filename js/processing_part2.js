@@ -41,8 +41,8 @@ function processingVideoBridnessContrast() {
 	var contrast =pegel( parseFloat(document.getElementById("In1").value));
 	imgArrayIn = readCanvas(videoPlayer,0);
 	// Process chain begin    
-	RGBtoGRAY(BridnessSamples, imgArrayIn);   
-	setAmplitude(ContrastSamples, BridnessSamples, contrast);   
+	RGBtoGRAY(BridnessSamples, imgArrayIn);
+    setAmplitudeVideo(ContrastSamples, BridnessSamples, contrast);
 	GRAYtoRGB(imgArrayOut, ContrastSamples);  
 	// Process chain end
 	writeCanvas(iImageOut);
@@ -51,15 +51,16 @@ function processingVideoBridnessContrast() {
 }
 
 function  pegel(wert) {	   // Pegel berechnung dbFS
+    return ( Math.round(Math.pow(10, wert/20)*255)/255 );
+}
 
-}	
-
-function  db(wert) {	 
-
+function  db(wert) {
 }
 
 function setAmplitudeVideo(iOutput, iInput, iAplitude) {  
-
+	for (let i=0; i<iOutput.length; i++){
+		iOutput[i] = iInput[i]*iAplitude;
+	}
 }
 
 function processingVideoChromaKeying() {
@@ -75,8 +76,28 @@ function processingVideoChromaKeying() {
 	LogArray = ["imgArrayIn", "imgArrayOut"];
 }
 
-function setChromaKeying(iOutput, iInput, iR, iG, iB) {  
+function setChromaKeying(iOutput, iInput, iR, iG, iB) {
+    for (var i=0; i<iOutput.length-5; i+=4) {
+        var redBrightness = 0.299*Math.pow(iInput[i],2);
+        var blueBrightness = 0.587*Math.pow(iInput[i+1],2);
+        var greenBrightness = 0.114*Math.pow(iInput[i+2],2);
+        var helligkeit = Math.sqrt( redBrightness + blueBrightness + greenBrightness);
+        // brightness = Math.sqrt(0.299*pow(r,2) + 0.587*pow(g,2) + 0.114*pow(b,2))
 
+        var range = 20;
+        if(iInput[i]>=iR-range && iInput[i]<=iR+range) {
+            if (iInput[i+1]>=iG-range && iInput[i+1]<=iG+range){
+                if (iInput[i+2]>=iB-range && iInput[i+2]<=iB+range){
+                    iOutput[i+3] = 0;
+                }
+            }
+        } else {
+            iOutput[i] = iInput[i];
+            iOutput[i+1] = iInput[i+1];
+            iOutput[i+2] = iInput[i+2];
+            iOutput[i+3] = iInput[i+3];
+        }
+    }
 }
 
 function processingVideoTP10_cos64() { 
