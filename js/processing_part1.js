@@ -745,21 +745,32 @@ function setClipTransperency12(iPlayer,iOutput,iInput, iClip1Transperency, iClip
 		
 }
 
-function setClipCut121(iPlayer,iOutput, iInput, iClip1StartTime, iInput1DurationTime1,iInput2DurationTime1, iInput1DurationTime2) { 
-iCurrentTime=iPlayer.currentTime;
-iInput1DurationTime1 +=iClip1StartTime;
-iInput2DurationTime1 +=iInput1DurationTime1 ;
-iInput1DurationTime2 +=iInput2DurationTime1 ;
-iClip1StartTime /=1000;
-iInput1DurationTime1 /=1000;
-iInput2DurationTime1 /=1000;
-iInput1DurationTime2 /=1000;
-if ((iCurrentTime > iInput1DurationTime2) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;	
- 
-if ((iCurrentTime < iInput1DurationTime1) || (iCurrentTime > iInput2DurationTime1)) iTransparenz = 255 ; 
-else iTransparenz = 0 ;
+function setClipCut121(iPlayer,iOutput, iInput, iClip1StartTime, iInput1DurationTime1,iInput2DurationTime1, iInput1DurationTime2) {
+	iCurrentTime=iPlayer.currentTime;
+	iInput1DurationTime1 +=iClip1StartTime;
+	iInput2DurationTime1 +=iInput1DurationTime1 ;
+	iInput1DurationTime2 +=iInput2DurationTime1 ;
+	iClip1StartTime /=1000;
+	iInput1DurationTime1 /=1000;
+	iInput2DurationTime1 /=1000;
+	iInput1DurationTime2 /=1000;
+	if ((iCurrentTime > iInput1DurationTime2) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;
 
-		
+	if ((iCurrentTime < iInput1DurationTime1) || (iCurrentTime > iInput2DurationTime1)){
+		for (let i=0; i<iOutput.length; i+=4){
+			iOutput[i] = iInput[i];
+			iOutput[i+1] = iInput[i+1];
+			iOutput[i+2] = iInput[i+2];
+			iOutput[i+3] = 255;
+		}
+	} else{
+		for (let i=0; i<iOutput.length; i+=4){
+			iOutput[i] = iInput[i];
+			iOutput[i+1] = iInput[i+1];
+			iOutput[i+2] = iInput[i+2];
+			iOutput[i+3] = 0;
+		}
+	}
 }
 //	--------------------------------------------------------------- Audio Processing  Default--------------------------------------------------------------
 
