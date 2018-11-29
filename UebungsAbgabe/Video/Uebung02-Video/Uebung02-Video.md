@@ -97,8 +97,7 @@
   <img src="./2-1/2-1-b-361Hz.JPG">
   <h1>2.1 b 1. Zusatz Cosinus 359Hz</h1>
   <img src="./2-1/2-1-b-359Hz.JPG">
-    <p>Bei einigen Displays treten bereits ab ca. 300Hz Aliasing-Effekte auf. Daher sind zwischen 359 und 361 Hz keine Unterschiede erkennbar. Durch die    
-       "Spiegelungen" ist die Darstellung der Frequenzen in etwa gleich gestört.</p>
+    <p>Der Frequenzgang von 359 Hz und 361Hz ist identisch, da die "zu hohe" Frequenz von 361 genau um 1Hz spiegelt und somit die Signatur von 359Hz abbildet.</p>
 </div>
 
 ---

@@ -728,14 +728,20 @@ function processingVideoPerceptionTime() {
 }
 
 function setClipTransperency12(iPlayer,iOutput,iInput, iClip1Transperency, iClip1StartTime, iInput1DurationTime1) { 
-iCurrentTime=iPlayer.currentTime;
-iInput1DurationTime1 +=iClip1StartTime;
-iClip1StartTime /=1000;
-iInput1DurationTime1 /=1000;
+	iCurrentTime=iPlayer.currentTime;
+	iInput1DurationTime1 +=iClip1StartTime;
+	iClip1StartTime /=1000;
+	iInput1DurationTime1 /=1000;
 
-if ((iCurrentTime > iInput1DurationTime1) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;	
-iCanvasBackgroundPicture = picFile;
+	if ((iCurrentTime > iInput1DurationTime1) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;
+	iCanvasBackgroundPicture = picFile;
 
+	for (let i=0; i<iOutput.length; i+=4){
+		iOutput[i] = iInput[i];
+		iOutput[i+1] = iInput[i+1];
+		iOutput[i+2] = iInput[i+2];
+		iOutput[i+3] = iClip1Transperency;
+	}
 		
 }
 
