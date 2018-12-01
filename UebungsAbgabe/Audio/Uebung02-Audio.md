@@ -6,15 +6,27 @@
 
 Bei Wellen mit höherer Amplitude schlägt der Peak weiter von der Amplitudenmitte aus. Bei 800hz schlägt der Peak doppelt so oft aus wie bei 400hz im gleichen Zeitfenster. Bei 3200hz schlägt der Peak acht mal so oft aus wie bei 400hz. Die Phase bestimmt bei welchem Punkt auf einer Periode die Welle beginnt.
 
-# Stellen Sie an der Anwendung ein: 0 kHz, 2 kHz, 4 kHz, (Samplingfrequenz/2)+4kHz und (Samplingfrequenz/2)-4kHz, Samplingfrequenz/2. Welche Frequenzen erscheinen?
+# Stellen Sie an der Anwendung ein:
 
-input frequenz | output frequenz
-- 0hz | keine
-- 2khz | 2khz
-- 4khz | 4khz
-- (Samplingfrequenz/2)+4kHz | 4khz
-- (Samplingfrequenz/2)-4kHz | (Samplingfrequenz-4000)hz
-- Samplingfrequenz/2 | Samplingfrequenz/2
+- **0 kHz**
+- **2 kHz**
+- **4 kHz**
+- **(Samplingfrequenz/2)+4kHz**
+- **(Samplingfrequenz/2)-4kHz**
+- **Samplingfrequenz/2**
+
+## Welche Frequenzen erscheinen?
+
++---------------------------+-----------------------------+
+| input frequenz			| erscheinende frequenz       |
++===========================+=============================+
+| 0hz\  					| keine\                      |
+| 2khz\   			        | 2khz\                       |
+| 4khz\ 					| 4khz\                       |
+| (Samplingfrequenz/2)+4kHz | 4khz\                       |
+| (Samplingfrequenz/2)-4kHz | (Samplingfrequenz-4000)hz   |
+| Samplingfrequenz/2 	    | Samplingfrequenz/2          |
++---------------------------+-----------------------------+
 
 # Was würde passieren, wenn man geeignet Bandbegrenzen würde
 
@@ -42,6 +54,24 @@ samplerate * travel time = amount of samples
 
 # Hochpass / Tiefpass erster und zweiter Ordnung
 
-Ein Hochpass reduziert die Amplitude der höheren Frequenzen. Der Tiefpass demzufolge die tieferen Frequenzen.
+Ein Tiefpass reduziert die Amplitude der höheren Frequenzen. Der Hochpass demzufolge die tieferen Frequenzen.
 
-Ein Hochpass zweiter Ordnung macht das gleiche wie der Hochpass erster Ordnung, jedoch ist die Abschwächung stärker.
+![Hochpass erster Ordnung](./Uebung-2/hochpass1.png "Hochpass erster Ordnung")
+
+![Tiefpass erster Ordnung](./Uebung-2/tiefpass1.png "Tiefpass erster Ordnung")
+
+Ein Hochpass zweiter Ordnung schwächt den Amplituden höherer Frequenzen ab wie der Hochpass erster Ordnung, jedoch ist die Abschwächung stärker.
+
+![Hochpass zweiter Ordnung](./Uebung-2/hochpass2.png "Hochpass zweiter Ordnung")
+
+![Tiefpass zweiter Ordnung](./Uebung-2/tiefpass2.png "Tiefpass zweiter Ordnung")
+
+# Bei welcher Wahrnehmungsschwelle (Lautstärke) ist das Testsignal nicht eindeutig identifizierbar?
+
+Visuell : ~ -40dbfs
+
+Akustisch  : ~ -50dbfs
+
+![-50dbfs](./Uebung-2/wahrnehmungsschwelle-2percent.png "-50dbfs")
+
+![-INFINITYdbfs](./Uebung-2/wahrnehmungsschwelle-0percent.png "- INFINITY dbfs")
