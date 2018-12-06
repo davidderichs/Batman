@@ -115,7 +115,3 @@ Die Fragestellung ergibt keinen Sinn. In welchem Sinne identifizierbar? Hörbar 
 # Bei welcher Wahrnehmungsschwelle (Spieldauer) ist das Testsignal eindeutig identifizierbar? (Objekt)
 
 Das gleiche Ergebnis wie bei *"Bei welcher Wahrnehmungsschwelle (Spieldauer) ist das Testsignal nicht eindeutig identifizierbar?"*
-
-# Erstellen Sie je ein Screenshot von der Pegel, Spektrum- und Waveformdarstellung der Signale mit allen Werten und Einheiten!
-
-Sie wiederholen sich.
