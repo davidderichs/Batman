@@ -1,24 +1,12 @@
 <!-- $size: A4 -portrait -->
-
-<style>
-  	p{
-  		font-size: 12pt;
-  	}
-    div {
-  	  position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding-top: 5%;
-    }
-    h1 {
-      font-size: 18pt !important;
-    }
-</style>
-
-
+> <style>
+>   	p{
+>   		font-size: 12pt;
+>   	}
+>     h1 {
+>       font-size: 18pt !important;
+>     }
+> </style>
 <div>
   <h1>2.1 a) i. Formel zur Beschreibung des Cosinus</h1>
   <img src="./2-1/CosinusFunktion.JPG"> <br>
@@ -32,11 +20,12 @@
 
 ---
 
+
 <div>
   <h1>2.1 a) iii. Cosinus Filmgenerator 1Hz</h1>
   <img src="./2-1/CosinusFilmgeneratorScreenshotMain.JPG">
   <img src="./2-1/2-1-a-Bereich.JPG">  
-    <h1>2.1 a) iii. Cosinus Filmgenerato 1Hz</h1>
+  <h1>2.1 a) iii. Cosinus Filmgenerator 1Hz</h1>
   <img src="./2-1/2-1-a-YUV-Verlauf.JPG"> <img src="./2-1/2-1-a-Waveform.JPG">
   <p>Die Cosinus Schwingung ist im Y Verlauf gut zu erkennen</p>
   <p>Auch die Waveform zeigt den Farbverlauf sehr gut.</p>
@@ -216,6 +205,49 @@
   <p>Der Soebel-Filter hat die Konturen korrekt herausgearbeitet. Die Struktur des Gitters ist sehr gut erkennbar. Der Frequenzgang zeichnet sich durch sehr 
      steile Grau-Wert-Abfälle bzw. Steigungen aus. Dies ist durch den hohen Kontrast bzw. wertebedingten Unterschiede zu erklären.</p>
 </div>
+
+---
+
+<div>
+  <h1>1.9a Wahrnehmung von Videosignalen (Variation der Deckkraft)</h1>  
+  <p>Originalsignal (Deckkraft des Testvideos: 0%):</p>
+  <img src="./1-9/Premiere-00.png">
+  <p>Testsignal (Deckkraft des Testvideos: 100%):</p>
+  <img src="./1-9/Premiere-100.png">
+  <p>i. & ii. untere Wahrnehmungsschwelle:</p>
+  <img src="./1-9/Premiere-10.png">
+  <p>Die untere Wahrnehmungsschwelle liegt in diesem Beispiel bei ca 10%. Zu sehen an dem unteren angehobenen schwarzen Bereich in der Waveformdarstellung.</p>
+  <p>iii. Dynamik der Störung:</p>
+  <p>10 Prozent von 255 Pixel Systemgrenze = 25 Pixel. <br>
+  Formel: 20 * lg(Uein/Usys) | bei der Dynamik wird mit der Vollaussteuerung von 236 Pixeln gerechnet<br>
+  db der Dynamik der Störung: 20* lg (25/236) = <b>-19,49db</b></p>
+  <p>iv. & v. obere Wahrnehmungsschwelle:</p>
+  <img src="./1-9/Premiere-60.png">
+  <p>Die obere Wahrnehmungsschwelle liegt in diesem Beispiel bei ca 60%. Zu sehen an dem oberen Originalsignal in der Waveformdarstellung.</p>
+  <p>vi. Dynamik des Objekts:</p>
+  <p>60 Prozent von 255 Pixel Systemgrenze = 153 Pixel. <br>
+  Formel: 20 * lg(Uein/Usys) | bei der Dynamik wird mit der Vollaussteuerung von 236 Pixeln gerechnet<br>
+  db der Dynamik des Objekts: 20* lg (153/236) = <b>-3,098db</b></p>
+</div>
+
+---
+
+<div>
+  <h1>1.9b Wahrnehmung von Videosignalen (Variation der Spieldauer)</h1>  
+  <p>Originalsignal:</p>
+  <img src="./1-9/Premiere-00.png">
+  <p>Testsignal:</p>
+  <img src="./1-9/Premiere-100.png">
+  <p>i. & ii. untere Wahrnehmungsschwelle:</p>
+  <img src="./1-9/Premiere-ums.png">
+  <p>Die untere Wahrnehmungsschwelle liegt in diesem Beispiel bei ca 30ms.</p>
+ 
+  <p>iv. & v. obere Wahrnehmungsschwelle:</p>
+  <img src="./1-9/Premiere-oms.png">
+  <p>Die obere Wahrnehmungsschwelle liegt in diesem Beispiel bei ca 500ms.</p>
+
+</div>
+
 
 
 
