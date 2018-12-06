@@ -69,10 +69,12 @@ var audioFile  = 'asset/audio/dual_audio.wav';
 var audioFile1 = 'asset/audio/rauschen_weiss.wav';
 // Auskommentiert für Uebung Video 2 Aufgaben 2.4 und 2.5
 var videoFile  = "asset/video/blue_screen.webm" ;
-// var videoFile  = "asset/video/feinesGitterBesser.mp4" ;
 var videoFile1  = "asset/video/background.webm"  ;
+var videoFile2  = "asset/video/feinesGitterBesser.mp4" ;
+var videoFile3  = "asset/video/Fenster.mp4" ;
 var picFile = "asset/pic/leer.jpg"; 
 var picFile1 = "asset/pic/BeuthHSMapSmall2klein.jpg"; 
+var picFile2 = "asset/pic/fenster2.jpg";
 
 var jsNode;
 var aContext;
