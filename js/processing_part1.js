@@ -27,12 +27,12 @@ function mainPlayer(){
 		case "u1.10": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoPerceptionTransparency); 
 			setImputFields("visible","visible","Transparency(0-255): ","50", "hidden","hidden","Video1-On/Off(0,1): ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile1);
+			loadPlayer(videoPlayer, videoFile2, picFile2);
             break        
 		case "u1.11": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoPerceptionTime);  
 			setImputFields("visible","visible","Time(ms: 0.0 - 1000.0): ","1000", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile1);
+			loadPlayer(videoPlayer, videoFile2, picFile2);
             break 
 		case "u2.1": 
 			setMainVideoPlayer(720,404,processingVideoGenCosinus);     // L�sung 2.1
@@ -51,7 +51,7 @@ function mainPlayer(){
 	    case "u2.4": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10);  //l�sung  2.2
 			setImputFields("hidden","hidden","Hz: ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 	    case "u2.4a": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10_cos64);  //l�sung  2.2
@@ -60,12 +60,12 @@ function mainPlayer(){
 		case "u2.5": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10);  //l�sung  2.2			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 		case "u2.5a": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10visuell);  
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 		case "u2.5b": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10_cos64); 
@@ -74,17 +74,17 @@ function mainPlayer(){
 	    case "u2.6": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoTP20); 
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 		case "u2.7": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP20);  
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break        
 		case "u2.8": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoSoebel);  
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break  
 		case "u3.1": 
 			setMainVideoPlayer(8,1,processingVideoGenKompDelta); //l�sung  3.1 
