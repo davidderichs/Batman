@@ -27,12 +27,12 @@ function mainPlayer(){
 		case "u1.10": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoPerceptionTransparency); 
 			setImputFields("visible","visible","Transparency(0-255): ","50", "hidden","hidden","Video1-On/Off(0,1): ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile1);
+			loadPlayer(videoPlayer, videoFile2, picFile2);
             break        
 		case "u1.11": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoPerceptionTime);  
 			setImputFields("visible","visible","Time(ms: 0.0 - 1000.0): ","1000", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile1);
+			loadPlayer(videoPlayer, videoFile2, picFile2);
             break 
 		case "u2.1": 
 			setMainVideoPlayer(720,404,processingVideoGenCosinus);     // L�sung 2.1
@@ -51,7 +51,7 @@ function mainPlayer(){
 	    case "u2.4": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10);  //l�sung  2.2
 			setImputFields("hidden","hidden","Hz: ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 	    case "u2.4a": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10_cos64);  //l�sung  2.2
@@ -60,12 +60,12 @@ function mainPlayer(){
 		case "u2.5": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10);  //l�sung  2.2			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 		case "u2.5a": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10visuell);  
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 		case "u2.5b": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10_cos64); 
@@ -74,17 +74,17 @@ function mainPlayer(){
 	    case "u2.6": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoTP20); 
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break;
 		case "u2.7": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoHP20);  
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break        
 		case "u2.8": 
 			setMainVideoPlayer(display_fac,display_fac,processingVideoSoebel);  
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
-			loadPlayer(videoPlayer, videoFile, picFile);
+			loadPlayer(videoPlayer, videoFile2, picFile);
             break  
 		case "u3.1": 
 			setMainVideoPlayer(8,1,processingVideoGenKompDelta); //l�sung  3.1 
@@ -728,32 +728,49 @@ function processingVideoPerceptionTime() {
 }
 
 function setClipTransperency12(iPlayer,iOutput,iInput, iClip1Transperency, iClip1StartTime, iInput1DurationTime1) { 
-iCurrentTime=iPlayer.currentTime;
-iInput1DurationTime1 +=iClip1StartTime;
-iClip1StartTime /=1000;
-iInput1DurationTime1 /=1000;
+	iCurrentTime=iPlayer.currentTime;
+	iInput1DurationTime1 +=iClip1StartTime;
+	iClip1StartTime /=1000;
+	iInput1DurationTime1 /=1000;
 
-if ((iCurrentTime > iInput1DurationTime1) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;	
-iCanvasBackgroundPicture = picFile;
+	if ((iCurrentTime > iInput1DurationTime1) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;
+	iCanvasBackgroundPicture = picFile;
 
+	for (let i=0; i<iOutput.length; i+=4){
+		iOutput[i] = iInput[i];
+		iOutput[i+1] = iInput[i+1];
+		iOutput[i+2] = iInput[i+2];
+		iOutput[i+3] = iClip1Transperency;
+	}
 		
 }
 
-function setClipCut121(iPlayer,iOutput, iInput, iClip1StartTime, iInput1DurationTime1,iInput2DurationTime1, iInput1DurationTime2) { 
-iCurrentTime=iPlayer.currentTime;
-iInput1DurationTime1 +=iClip1StartTime;
-iInput2DurationTime1 +=iInput1DurationTime1 ;
-iInput1DurationTime2 +=iInput2DurationTime1 ;
-iClip1StartTime /=1000;
-iInput1DurationTime1 /=1000;
-iInput2DurationTime1 /=1000;
-iInput1DurationTime2 /=1000;
-if ((iCurrentTime > iInput1DurationTime2) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;	
- 
-if ((iCurrentTime < iInput1DurationTime1) || (iCurrentTime > iInput2DurationTime1)) iTransparenz = 255 ; 
-else iTransparenz = 0 ;
+function setClipCut121(iPlayer,iOutput, iInput, iClip1StartTime, iInput1DurationTime1,iInput2DurationTime1, iInput1DurationTime2) {
+	iCurrentTime=iPlayer.currentTime;
+	iInput1DurationTime1 +=iClip1StartTime;
+	iInput2DurationTime1 +=iInput1DurationTime1 ;
+	iInput1DurationTime2 +=iInput2DurationTime1 ;
+	iClip1StartTime /=1000;
+	iInput1DurationTime1 /=1000;
+	iInput2DurationTime1 /=1000;
+	iInput1DurationTime2 /=1000;
+	if ((iCurrentTime > iInput1DurationTime2) || (iCurrentTime < iClip1StartTime)) iPlayer.currentTime =iClip1StartTime;
 
-		
+	if ((iCurrentTime < iInput1DurationTime1) || (iCurrentTime > iInput2DurationTime1)){
+		for (let i=0; i<iOutput.length; i+=4){
+			iOutput[i] = iInput[i];
+			iOutput[i+1] = iInput[i+1];
+			iOutput[i+2] = iInput[i+2];
+			iOutput[i+3] = 255;
+		}
+	} else{
+		for (let i=0; i<iOutput.length; i+=4){
+			iOutput[i] = iInput[i];
+			iOutput[i+1] = iInput[i+1];
+			iOutput[i+2] = iInput[i+2];
+			iOutput[i+3] = 0;
+		}
+	}
 }
 //	--------------------------------------------------------------- Audio Processing  Default--------------------------------------------------------------
 

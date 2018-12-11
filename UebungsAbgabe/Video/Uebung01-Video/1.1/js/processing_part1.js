@@ -1,5 +1,5 @@
 /**
- * Created by Jürgen Lohr on 1.9.2016.
+ * Created by Jï¿½rgen Lohr on 1.9.2016.
  */
 			//	---------------------------------------------------------------- Interaction Control---------------------------------------------------------------
 	
@@ -16,11 +16,11 @@ function mainPlayer(){
 			loadPlayer(videoPlayer, videoFile, picFile);
             break; 
 		case "u1.1": 
-			setMainVideoPlayer(720,404,processingVideoGenColourArea);  // Lösung 1.1
+			setMainVideoPlayer(720,404,processingVideoGenColourArea);  // Lï¿½sung 1.1
 			setImputFields("visible","visible","R (0-255): ","235", "visible","visible","G: ","235", "visible","visible","B: ","235");
             break; 
         case "u1.2": 
-            setMainVideoPlayer(display_fac,display_fac,processingVideoGray); // Lösung 1.1
+            setMainVideoPlayer(display_fac,display_fac,processingVideoGray); // Lï¿½sung 1.1
 			setImputFields("hidden","hidden","Quant-Faktor: ","8", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break; 
@@ -35,30 +35,30 @@ function mainPlayer(){
 			loadPlayer(videoPlayer, videoFile, picFile1);
             break 
 		case "u2.1": 
-			setMainVideoPlayer(720,404,processingVideoGenCosinus);     // Lösung 2.1
+			setMainVideoPlayer(720,404,processingVideoGenCosinus);     // Lï¿½sung 2.1
 			setImputFields("visible","visible","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
             break; 
         case "u2.2": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoBridnessContrast);     //lösung  2.1
+			setMainVideoPlayer(display_fac,display_fac,processingVideoBridnessContrast);     //lï¿½sung  2.1
 			setImputFields("visible","visible","Contrast (dB): ","-6", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break; 
 	    case "u2.3": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoChromaKeying); //lösung  2.1		
+			setMainVideoPlayer(display_fac,display_fac,processingVideoChromaKeying); //lï¿½sung  2.1		
 			setImputFields("visible","visible","R: ","50", "visible","visible","G: ","75", "visible","visible","B: ","150");
 			loadPlayer(videoPlayer, videoFile, picFile1);
             break;
 	    case "u2.4": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10);  //lösung  2.2
+			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10);  //lï¿½sung  2.2
 			setImputFields("hidden","hidden","Hz: ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break;
 	    case "u2.4a": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10_cos64);  //lösung  2.2
+			setMainVideoPlayer(display_fac,display_fac,processingVideoTP10_cos64);  //lï¿½sung  2.2
 			setImputFields("visible","visible","Hz: ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
             break;
 		case "u2.5": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10);  //lösung  2.2			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
+			setMainVideoPlayer(display_fac,display_fac,processingVideoHP10);  //lï¿½sung  2.2			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			setImputFields("hidden","hidden","Hz: ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break;
@@ -87,115 +87,115 @@ function mainPlayer(){
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  
 		case "u3.1": 
-			setMainVideoPlayer(8,1,processingVideoGenKompDelta); //lösung  3.1 
+			setMainVideoPlayer(8,1,processingVideoGenKompDelta); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..512. , off: 5555): ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			break  			
 		case "u3.2": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoKompDelta); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideoKompDelta); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..512. , off: 5555): ","8", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  	
 		case "u3.3": 
-			setMainVideoPlayer(8,1,processingVideoGenKompSubband); //lösung  3.1 
+			setMainVideoPlayer(8,1,processingVideoGenKompSubband); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","1", "visible","visible","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
             break  	
 		case "u3.4": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoKompSubband); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideoKompSubband); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","16", "visible","visible","HP-Quant-Faktor: ","256", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  		
 		case "u3.5": 
-			setMainVideoPlayer(4,4,processingVideoGenKompFFTOneHz); setInitFFT(4);//lösung  3.1 
+			setMainVideoPlayer(4,4,processingVideoGenKompFFTOneHz); setInitFFT(4);//lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1 bis  - 24 Bit - 88888888:off): ","1", "visible","visible","HP-Quant-Faktor: ","1", "visible","visible","Grenzfreq.(Hz): ","1");
 			break  	
 		case "u3.6": 
-			setMainVideoPlayer(4,4,processingVideoGenKompFFTpic); setInitFFT(4);//lösung  zusatz ?3.1 
+			setMainVideoPlayer(4,4,processingVideoGenKompFFTpic); setInitFFT(4);//lï¿½sung  zusatz ?3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1 bis  - 24 Bit - 88888888:off): ","1024", "visible","visible","HP-Quant-Faktor: ","16777216", "visible","visible","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  	
 		case "u3.7": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideoKompFFT); setInitFFT(display_fac);//lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideoKompFFT); setInitFFT(display_fac);//lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1 bis  - 24 Bit - 88888888:off): ","1024", "visible","visible","HP-Quant-Faktor: ","16777216", "visible","visible","Grenzfreq.(Hz): ","20");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  	
 		case "u4.1": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo41); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo41); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..512. , off: 5555): ","2", "visible","visible","Gain Sumant: ","100", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(videoPlayer, videoFile, picFile);
 			break  			
 		case "u4.2": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo42); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo42); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","2", "visible","visible","HP-Quant-Faktor: ","1", "visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  
 		case "u4.3": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo43); setInitFFT(display_fac);//lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo43); setInitFFT(display_fac);//lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1 bis  - 24 Bit - 88888888:off): ","4", "visible","visible","HP-Quant-Faktor: ","1", "visible","visible","Grenzfreq.(Hz): ","20");
 			setImputFields4("visible","visible","Amplitude(0 bis  - 200): ","10");
 			loadPlayer(videoPlayer, videoFile, picFile);	
             break  
 		case "u4.4": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo44); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo44); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  		
 		case "u4.5": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo45); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo45); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
 			break  	
 		case "u4.6": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo46); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo46); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break  	
 		case "u4.7": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo47); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo47); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break 
 		case "u4.8": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo48); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo48); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break 
 		case "u4.9": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo49); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo49); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break 
 		case "u4.10": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo410); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo410); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break 
 		case "u4.11": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo411); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo411); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break 
 		case "u4.12": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo412); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo412); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break 
 		case "u4.13": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo413); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo413); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
             break 
 		case "u4.14": 
-			setMainVideoPlayer(display_fac,display_fac,processingVideo414); //lösung  3.1 
+			setMainVideoPlayer(display_fac,display_fac,processingVideo414); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..255. , off: 5555): ","3", "visible","visible","MP1 + Mp2-Quant-Faktor: ","2","visible","visible","HP-Quant-Faktor: ","1");
 			setImputFields4("visible","visible","Gain Sumant: ","100");
 			loadPlayer(videoPlayer, videoFile, picFile);
@@ -211,11 +211,11 @@ function mainPlayer(){
             break 
 		case "u11.1": 
 			setImputFields("visible","visible","Frequency(0-20000): ","1000", "hidden","hidden","???: ","1", "hidden","hidden","?????: ","1");
-			setMainAudioPlayer("Gen",1,sampleRate,processingAudioGenSinus); //lösung  Audio 1.1 
+			setMainAudioPlayer("Gen",1,sampleRate,processingAudioGenSinus); //lï¿½sung  Audio 1.1 
             break 
 		case "u11.2": 
 			setImputFields("hidden","hidden","???: ","1", "hidden","hidden","???: ","1", "hidden","hidden","?????: ","1");
-			setMainAudioPlayer("Aud",1,1024,processingAudioMono); //lösung  Audio 1.1 
+			setMainAudioPlayer("Aud",1,1024,processingAudioMono); //lï¿½sung  Audio 1.1 
 			loadPlayer(audioPlayer, audioFile, picFile);
             break 	
 		case "u11.10": 
@@ -239,17 +239,17 @@ function mainPlayer(){
             break 
 		case "u12.3": 
 			setImputFields("visible","visible","Direct dB(-96 bis +12): ","0", "visible","visible","Delay dB(-96 bis +12): ","0", "visible","visible","DealyTime ms(0 bis 332): ","200");
-			setMainAudioPlayer("Aud",1,1024*16,processingAudioDelay);  //lösung 2
+			setMainAudioPlayer("Aud",1,1024*16,processingAudioDelay);  //lï¿½sung 2
 			loadPlayer(audioPlayer, audioFile, picFile);
             break 
 		case "u12.3a": 
 			setImputFields("visible","visible","Delay dB(-96 bis +12): ","-2", "hidden","hidden","DealyTime(-16k bis 16k): ","16000", "hidden","hidden","?????: ","1");
-			setMainAudioPlayer("Aud",1,1024*16,processingAudioDelay16K);  //lösung 2
+			setMainAudioPlayer("Aud",1,1024*16,processingAudioDelay16K);  //lï¿½sung 2
 			loadPlayer(audioPlayer, audioFile, picFile);
             break 
 		case "u12.3b": 
 			setImputFields("visible","visible","Direct dB(-96 bis +12): ","0", "visible","visible","Delay dB(-96 bis +12): ","0", "visible","visible","DealyTime ms(0 bis 0.17): ","0.025");
-			setMainAudioPlayer("Gen",1,8,processingAudioGenDelay);  //lösung 2
+			setMainAudioPlayer("Gen",1,8,processingAudioGenDelay);  //lï¿½sung 2
             break 			
 		case "u12.4": 
 			setImputFields("visible","visible","Type(1-1000): ","2", "hidden","hidden","???: ","1", "hidden","hidden","?????: ","1");
@@ -276,103 +276,103 @@ function mainPlayer(){
 			setMainAudioPlayer("Gen",1,1024*16,processingAudioBS2O1D); 
             break 
 		case "u13.1": 
-			setMainAudioPlayer("Gen",1,8,processingAudioGenKompDelta); //lösung  3.1 
+			setMainAudioPlayer("Gen",1,8,processingAudioGenKompDelta); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			break  			
 		case "u13.2": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudioKompDelta); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudioKompDelta); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);
             break 
 		case "u13.3": 
-			setMainAudioPlayer("Gen",1,8,processingAudioGenKompSubband); //lösung  3.1 
+			setMainAudioPlayer("Gen",1,8,processingAudioGenKompSubband); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","1", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			break  			
 		case "u13.4": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudioKompSubband); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudioKompSubband); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","512", "visible","visible","HP-Quant-Faktor: ","66000", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);
             break 
 		case "u13.5": 
-			setMainAudioPlayer("Gen",1,8,processingAudioGenKompFFT); //lösung  3.1 
+			setMainAudioPlayer("Gen",1,8,processingAudioGenKompFFT); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,.. 24 Bit. , off: 88888888): ","1", "visible","visible","HP-Quant-Faktor: ","1", "visible","visible","Grenzfreq.(1-2 Hz): ","2");
 			break  			
 		case "u13.6": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudioKompFFT); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudioKompFFT); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,.. 24 Bit. , off: 88888888): ","66000", "visible","visible","HP-Quant-Faktor: ","18888888", "visible","visible","Grenzfreq.(1-16000/2 Hz): ","1000");
 			loadPlayer(audioPlayer, audioFile, picFile);
             break			
 		case "u13.5a": 
-			setMainAudioPlayer("Gen",1,1024*8,processingAudioGenWhiteNoiseKompFFT); //lösung  3.1 
+			setMainAudioPlayer("Gen",1,1024*8,processingAudioGenWhiteNoiseKompFFT); //lï¿½sung  3.1 
 			setImputFields("visible","visible","TP-Quant-Faktor(1,2,4,8,16,.. 24 Bit. , off: 88888888): ","66000", "visible","visible","HP-Quant-Faktor: ","18888888", "visible","visible","Grenzfreq.(1-16000/2 Hz): ","1000");
 			break  			
 		case "u14.1": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio41); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio41); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.2": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio42); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio42); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);	
 			break  
 		case "u14.3": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio43); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio43); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.4": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio44); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio44); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.5": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio45); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio45); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.6": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio46); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio46); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.7": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio47); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio47); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.8": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio48); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio48); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.9": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio49); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio49); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.10": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio410); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio410); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.11": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio410); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio410); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.12": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio412); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio412); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.13": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio413); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio413); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
 		case "u14.14": 
-			setMainAudioPlayer("Aud",1,1024*16,processingAudio414); //lösung  3.1 
+			setMainAudioPlayer("Aud",1,1024*16,processingAudio414); //lï¿½sung  3.1 
 			setImputFields("visible","visible","Quant-Faktor(1,2,4,8,16,..4096. , off: 66000): ","64", "hidden","hidden","HP-Quant-Faktor: ","1", "hidden","hidden","Grenzfreq.(Hz): ","1");
 			loadPlayer(audioPlayer, audioFile, picFile);		
 			break  
@@ -612,7 +612,7 @@ function readCanvas(iVideoPlayer, ih) {  // Player; n. Line to read
 	return imgArrayIn;
 }
 
-function GRAYtoRGB_v0(iOutput, iInput) {  // Lösung 2.1a
+function GRAYtoRGB_v0(iOutput, iInput) {  // Lï¿½sung 2.1a
 	var r,g,b;
 	for(var i = 0; i < iInput.length; i+=1) {
 	    r = iInput[i];
@@ -624,7 +624,7 @@ function GRAYtoRGB_v0(iOutput, iInput) {  // Lösung 2.1a
 		iOutput[i*4+3] = 255;
 	}
 }
-function RGBtoGRAY_v0(iOutput, iInput, iSelectedChannelRGB) {  // Lösung 1.2
+function RGBtoGRAY_v0(iOutput, iInput, iSelectedChannelRGB) {  // Lï¿½sung 1.2
 	var r,g,b,gray ;
 	for(var i = 0; i < iOutput.length; i+=1) {
 		r = iInput[i*4+0];
@@ -645,7 +645,7 @@ function genBridness(iOutput, iBrightness) {
 		iOutput[i] = iBrightness ;     // the gray channel
 	}
 }
-			//	---------------------------------------------------------------- Video -Lösung Ü1---------------------------------------------------------------
+			//	---------------------------------------------------------------- Video -Lï¿½sung ï¿½1---------------------------------------------------------------
 	
 
 function processingVideoGenColourArea() {
@@ -670,13 +670,31 @@ function processingVideoGray() {
 	LogArray = ["imgArrayIn", "BridnessSamples",  "imgArrayOut"];
 }
 function genColourArea(iOutput, iR,iG,iB) {
-
+    for(i = 0; i < iOutput.length; i += 4){
+        iOutput[i] = iR;
+        iOutput[i+1] = iG;
+        iOutput[i+2] = iB;
+        iOutput[i+3] = 255;
+    }
 }
-function GRAYtoRGB(iOutput, iInput) {  
-
+function GRAYtoRGB(iOutput, iInput) {
+    let x = 0;
+    for(i = 0; i < iInput.length; i++){
+        iOutput[x] = iInput[i]
+        iOutput[x + 1] = iInput[i]
+        iOutput[x + 2] = iInput[i]
+        iOutput[x + 3] = 255;
+        x += 4;
+    }
 }
-function RGBtoGRAY(iOutput, iInput) { 
-
+function RGBtoGRAY(iOutput, iInput) {
+    let x = 0;
+    for(i = 0; i < iInput.length; i += 4){
+        // mittelwert aus rgb bilden
+        let mittelwert = (iInput[i] + iInput[i + 1] + iInput[i + 2]) / 3;
+        iOutput[x] = mittelwert;
+        x++;
+    };
 }
 function processingVideoPerceptionTransparency() { 
 	var	clip1StartTime  = 15000;
@@ -787,7 +805,7 @@ var iChannel
 
 	}	
 }
-	//	---------------------------------------------------------------- Audio -Lösung Ü1--------------------------------------------------------------
+	//	---------------------------------------------------------------- Audio -Lï¿½sung ï¿½1--------------------------------------------------------------
 
 function processingAudioGenSinus(event) {  
 	var freq = parseFloat(document.getElementById("In1").value);
