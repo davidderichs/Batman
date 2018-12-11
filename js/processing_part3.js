@@ -46,49 +46,63 @@ function processingVideoKompDelta() {
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
 					
-function setDelta(iOutput, iInput) {  
-
+function setDelta(iOutput, iInput) {
+	for (let i=0; i<iInput.length; i++){
+		if(i===0){
+			iOutput[i] = iInput[i];
+		} else {
+            iOutput[i]=iInput[i]-iInput[i-1];
+		}
+	}
 }
-function setIDelta(iOutput, iInput) {  
-
+function setIDelta(iOutput, iInput) {
+    for (let i=0; i<iInput.length; i++){
+        if(i===0){
+            iOutput[i] = iInput[i];
+        } else {
+            iOutput[i] = iInput[i] + iOutput[i - 1];
+        }
+    }
 }
 
 function setQuant(iOutput, iInput, iQuant, iRound)	{
-
+    for (let i=0; i<iInput.length; i++){
+            iOutput[i] = iInput[i]/iQuant;
+    }
 }
 
 function setIQuant(iOutput, iInput, iQuant)	{
-
+    for (let i=0; i<iInput.length; i++){
+        iOutput[i] = iInput[i]*iQuant;
+    }
 }
 
-	
+	// iInput2 ist DELTA, iInput ist BrightnesSamples
 function analyseError(iErrorLog, iInput2, iInput,iMaxAmplitude)  	{
-/*   SAD =0;  
-	 MSE = 0;
-	 PSNR= 0;
-     var Dif;
-	 var iMaxAmplitude = parseFloat(iMaxAmplitude);
-	
-	for ( var i = 0; i < (iInput2.length); i ++ ) { 
+	SAD = 0;
+	MSE = 0;
+	PSNR= 0;
+	var Dif;
+	var iMaxAmplitude = parseFloat(iMaxAmplitude);
 
+	for ( let i = 0; i < (iInput2.length); i++ ) {
 		if(typeof iInput2[i] != 'undefined'){
-		 if(! isNaN(iInput[i])&& ! isNaN(iInput2[i])){
-				Dif = iInput[i];	
-				MSE = 1
+			if(! isNaN(iInput[i]) && ! isNaN(iInput2[i])){
+				Dif = iInput[i];
+				MSE = 1;
 				SAD = 2;
 				iErrorLog[i] = Dif;
-					}
+			}
 		}
 	}
 
 	MSE += 0.000000001;
-	PSNR  =3;   
-	MSE  -= 0.000000001;		
-		
+	PSNR  =3;
+	MSE  -= 0.000000001;
+
 	SAD =runde (SAD,2);
     MSE =runde (MSE,2);
 	PSNR=runde (PSNR,2);
-	*/
 }
 
 
