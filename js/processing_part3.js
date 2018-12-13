@@ -68,7 +68,6 @@ function setIDelta(iOutput, iInput) {
 function setQuant(iOutput, iInput, iQuant, iRound)	{
     for (let i=0; i<iInput.length; i++){
         iOutput[i] = Number.parseFloat(iInput[i]/iQuant).toFixed(iRound);
-            // iOutput[i] = iInput[i]/iQuant;
     }
 }
 
@@ -178,20 +177,33 @@ function processingVideoKompSubband() {
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
 function setALength(iOutput, iInput) {		//Downsampling
-
+	for (let i=0; i<iInput.length; i++){
+		iOutput[i] = iInput[i];
+	}
+	iOutput[iOutput.length-1] = 0;
 }
 
 function setDownsampling(iOutput, iInput, idown_fac) {		//Downsampling
-
+	for (let i=0; i<iInput.length; i++){
+		iOutput[i] = iInput[i]/idown_fac;
+	}
 }
 
 
 function setUpsampling(iOutput, iInput, idown_fac) {		//Downsampling
-
+    for (let i=0; i<iInput.length; i++){
+        iOutput[i] = iInput[i]*idown_fac;
+    }
 }
 
-function setAHP1O1D(iOutput, iInput) {  
-
+function setAHP1O1D(iOutput, iInput) {
+    for (i=0;i<iInput.length;i++){
+        if(i==0){
+            iOutput[i]= iInput[i];
+        } else {
+            iOutput[i]= (0.5*iInput[i])-(0.5*iInput[i-1]);
+        }
+    }
 }
 
 function setMix(iOutput, iInput2, iInput1) {		//Mix

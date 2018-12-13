@@ -128,7 +128,11 @@ function processingVideoTP10() {
 
 function setTP1O1D(iOutput, iInput) {
 	for (i=0;i<iInput.length;i++){
-		iOutput[i]=(0.25*iInput[i])+(0.25*iInput[i-1])+(0.25*iInput[i+127])+(0.25*iInput[i+128]);
+		if(i===0){
+            iOutput[i]=(0.5*iInput[i])+0;
+        } else {
+            iOutput[i]=(0.5*iInput[i])+(0.5*iInput[i-1]);
+		}
 	}
 }
 
