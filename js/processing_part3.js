@@ -67,7 +67,8 @@ function setIDelta(iOutput, iInput) {
 
 function setQuant(iOutput, iInput, iQuant, iRound)	{
     for (let i=0; i<iInput.length; i++){
-            iOutput[i] = iInput[i]/iQuant;
+        iOutput[i] = Number.parseFloat(iInput[i]/iQuant).toFixed(iRound);
+            // iOutput[i] = iInput[i]/iQuant;
     }
 }
 
