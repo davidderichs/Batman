@@ -1,7 +1,7 @@
 /**
  * Created by J�rgen Lohr on 1.9.2016.
  */
-	
+
 	//	---------------------------------------------------------------- Video -L�sung �3--------------------------------------------------------------
 
 //--------------------Delta
@@ -9,43 +9,43 @@
 function processingVideoGenKompDelta() {
 	var quant = parseFloat(document.getElementById("In1").value);
 	var Round =2;
-	// Process chain begin ------------------------------------   
-	RGBtoGRAY(BridnessSamples, VideoTestArray);   
-	setDelta(DeltaSamples, BridnessSamples);   
+	// Process chain begin ------------------------------------
+	RGBtoGRAY(BridnessSamples, VideoTestArray);
+	setDelta(DeltaSamples, BridnessSamples);
 	setQuant(QuantSamples, DeltaSamples, quant, Round);
-	
+
 	setIQuant(iQuantSamples, QuantSamples, quant);
-	setIDelta(IDeltaSamples, iQuantSamples);   		
+	setIDelta(IDeltaSamples, iQuantSamples);
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
-		
-	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255) 
+
+	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255)
 	LogArray = ["VideoTestArray", "BridnessSamples", "DeltaSamples", "QuantSamples", "iQuantSamples", "IDeltaSamples", "imgArrayOut", "ErrorLog"];
 
 }
-function processingVideoKompDelta() { 
+function processingVideoKompDelta() {
 	var quant = parseFloat(document.getElementById("In1").value);
 	var Round =2;
 	imgArrayIn = readCanvas(videoPlayer,0);
 	// Process chain begin    ---// Loop through the pixels, turning them in-RGB-Out
-	RGBtoGRAY(BridnessSamples, imgArrayIn);   
-	setDelta(DeltaSamples, BridnessSamples);   
+	RGBtoGRAY(BridnessSamples, imgArrayIn);
+	setDelta(DeltaSamples, BridnessSamples);
 	setQuant(QuantSamples, DeltaSamples, quant, Round);
-	
+
 	setIQuant(iQuantSamples, QuantSamples, quant);
-	setIDelta(IDeltaSamples, iQuantSamples);   		
-	GRAYtoRGB(imgArrayOut, IDeltaSamples);   
+	setIDelta(IDeltaSamples, iQuantSamples);
+	GRAYtoRGB(imgArrayOut, IDeltaSamples);
 	// Process chain end
 	writeCanvas(iImageOut);
-	
-	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255); 
+
+	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255);
 	analyseVideoKompressionDelta(KompressionLog, quant );
 	LogArray = ["imgArrayIn", "BridnessSamples", "DeltaSamples", "QuantSamples", "iQuantSamples", "IDeltaSamples", "imgArrayOut", "ErrorLog"];
 }
 
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
-					
+
 function setDelta(iOutput, iInput) {
 	for (let i=0; i<iInput.length; i++){
 		if(i===0){
@@ -113,16 +113,16 @@ function processingVideoGenKompSubband() {
 	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var Round =1;
-	// Process chain begin ------------------------------------   
-	RGBtoGRAY(BridnessSamples, VideoTestArray);   
-	setALength(ALengthSamples, BridnessSamples);   
-	setTP1O1D(TPsamples, ALengthSamples);   
-	setHP1O1D(HPsamples, ALengthSamples);  
+	// Process chain begin ------------------------------------
+	RGBtoGRAY(BridnessSamples, VideoTestArray);
+	setALength(ALengthSamples, BridnessSamples);
+	setTP1O1D(TPsamples, ALengthSamples);
+	setHP1O1D(HPsamples, ALengthSamples);
 	setDownsampling(TPdownsamples, TPsamples, down_fac);
     setDownsampling(HPdownsamples, HPsamples, down_fac);
 	setQuant(TPquantsamples, TPdownsamples, TPquant, Round);
 	setQuant(HPquantsamples, HPdownsamples, HPquant, Round);
-	
+
 	setIQuant(TPIquantsamples, TPquantsamples, TPquant);
 	setIQuant(HPIquantsamples, HPquantsamples, HPquant);
 	setUpsampling(TPupsamples, TPIquantsamples, down_fac);
@@ -131,31 +131,31 @@ function processingVideoGenKompSubband() {
     setAHP1O1D(AHPOutsamples, HPupsamples);
 	setMix(MixOutSamples, ATPOutsamples, AHPOutsamples);
 	setDelay(DelaySamples, MixOutSamples,1)
-	setAmplitude(ScaleSamples, DelaySamples, 2);   
-	GRAYtoRGB(imgArrayOut, ScaleSamples); 
+	setAmplitude(ScaleSamples, DelaySamples, 2);
+	GRAYtoRGB(imgArrayOut, ScaleSamples);
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
-		
-	analyseError(ErrorLog,ScaleSamples, BridnessSamples,255) 
+
+	analyseError(ErrorLog,ScaleSamples, BridnessSamples,255)
 	LogArray = ["VideoTestArray", "BridnessSamples", "ALengthSamples", "TPsamples",  "HPsamples", "TPdownsamples","HPdownsamples","TPquantsamples","HPquantsamples","TPIquantsamples","HPIquantsamples", "TPupsamples","HPupsamples","ATPOutsamples", "AHPOutsamples", "MixOutSamples","DelaySamples", "ScaleSamples", "imgArrayOut", "ErrorLog"];
 }
 
-function processingVideoKompSubband() {  
+function processingVideoKompSubband() {
 	var down_fac = 2;
 	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var Round =1;
 	imgArrayIn = readCanvas(videoPlayer,0);
 	// Process chain begin    ---// Loop through the pixels, turning them in-RGB-Out
-	RGBtoGRAY(BridnessSamples, imgArrayIn);   
-	setALength(ALengthSamples, BridnessSamples);   
-	setTP1O1D(TPsamples, ALengthSamples);  
-	setHP1O1D(HPsamples, ALengthSamples);   
+	RGBtoGRAY(BridnessSamples, imgArrayIn);
+	setALength(ALengthSamples, BridnessSamples);
+	setTP1O1D(TPsamples, ALengthSamples);
+	setHP1O1D(HPsamples, ALengthSamples);
 	setDownsampling(TPdownsamples, TPsamples, down_fac);
     setDownsampling(HPdownsamples, HPsamples, down_fac);
 	setQuant(TPquantsamples, TPdownsamples, TPquant, Round);
 	setQuant(HPquantsamples, HPdownsamples, HPquant, Round);
-	
+
 	setIQuant(TPIquantsamples, TPquantsamples, TPquant);
 	setIQuant(HPIquantsamples, HPquantsamples, HPquant);
 	setUpsampling(TPupsamples, TPIquantsamples, down_fac);
@@ -164,12 +164,12 @@ function processingVideoKompSubband() {
     setAHP1O1D(AHPOutsamples, HPupsamples);
 	setMix(MixOutSamples, ATPOutsamples, AHPOutsamples);
 	setDelay(DelaySamples, MixOutSamples,1)
-	setAmplitude(ScaleSamples, DelaySamples, 2);   
-	GRAYtoRGB(imgArrayOut, ScaleSamples); 
+	setAmplitude(ScaleSamples, DelaySamples, 2);
+	GRAYtoRGB(imgArrayOut, ScaleSamples);
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
-		
-	analyseError(ErrorLog,ScaleSamples, BridnessSamples,255) 
+
+	analyseError(ErrorLog,ScaleSamples, BridnessSamples,255)
 	analyseVideoKompressionSubband(KompressionLog, TPquant, HPquant  );
 	LogArray = [ "BridnessSamples", "ALengthSamples", "TPsamples",  "HPsamples", "TPdownsamples","HPdownsamples","TPquantsamples","HPquantsamples","TPIquantsamples","HPIquantsamples", "TPupsamples","HPupsamples","ATPOutsamples", "AHPOutsamples", "MixOutSamples","DelaySamples", "ScaleSamples", "imgArrayOut", "ErrorLog"];
 }
@@ -227,22 +227,22 @@ function processingVideoGenKompFFTOneHz() {
 	var Round =0;
 	setFreqQuantMatrix(QuantMatrix,TPquant,HPquant,splitFreq);
 	// Process chain begin    ---// Loop through the pixels, turning them in-RGB-Out
-		GRAYtoRGB(imgArrayIn2, oneHz); 	
+		GRAYtoRGB(imgArrayIn2, oneHz);
     	setFFT(swepFFT,imgArrayIn2);
 		FFT1.spec=swepFFT.spec.slice(0,swepFFT.spec.length);
 		swapFFTfor(swepFFT)
 		setQuantFFT(quantFFT,swepFFT,QuantMatrix,Round);
-		
+
 		setInvQuantFFT(iswepFFT,quantFFT,QuantMatrix);
 		iquantFFT.spec=iswepFFT.spec.slice(0,iswepFFT.spec.length);
-		swapFFTback(iswepFFT)				
-		setIFFT(imgArrayOut, iswepFFT);	
-		RGBtoGRAY(iFFTspec,imgArrayOut);  
-		
+		swapFFTback(iswepFFT)
+		setIFFT(imgArrayOut, iswepFFT);
+		RGBtoGRAY(iFFTspec,imgArrayOut);
+
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
-		
-	analyseError(ErrorLog,iFFTspec, oneHz,255) 
+
+	analyseError(ErrorLog,iFFTspec, oneHz,255)
 	LogArray = ["imgArrayIn2","oneHz","FFT1.spec","swepFFT.spec","QuantMatrix", "quantFFT.spec","iquantFFT.spec","iswepFFT.spec","iFFTspec","imgArrayOut","ErrorLog"];
 }
 
@@ -254,8 +254,8 @@ function processingVideoGenKompFFTpic() {
 	setFreqQuantMatrix(QuantMatrix,TPquant,HPquant,splitFreq);
 	imgArrayIn = readCanvas(videoPlayer,0);
 	// Process chain begin    ---// Loop through the pixels, turning them in-RGB-Out
-		RGBtoGRAY( BridnessSamples,imgArrayIn); 
-		GRAYtoRGB(imgArrayIn2, BridnessSamples); 	
+		RGBtoGRAY( BridnessSamples,imgArrayIn);
+		GRAYtoRGB(imgArrayIn2, BridnessSamples);
 		setFFT(swepFFT,imgArrayIn2);
 		FFT1.spec=swepFFT.spec.slice(0,swepFFT.spec.length);
 		swapFFTfor(swepFFT)
@@ -263,18 +263,18 @@ function processingVideoGenKompFFTpic() {
 
 		setInvQuantFFT(iswepFFT,quantFFT,QuantMatrix);
 		iquantFFT.spec=iswepFFT.spec.slice(0,iswepFFT.spec.length);
-		swapFFTback(iswepFFT)				
-		setIFFT(imgArrayOut, iswepFFT);	
-		RGBtoGRAY(iFFTspec,imgArrayOut);  
-		
+		swapFFTback(iswepFFT)
+		setIFFT(imgArrayOut, iswepFFT);
+		RGBtoGRAY(iFFTspec,imgArrayOut);
+
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
-		
-	analyseError(ErrorLog,iFFTspec, BridnessSamples,255) 
+
+	analyseError(ErrorLog,iFFTspec, BridnessSamples,255)
 	LogArray = ["imgArrayIn","BridnessSamples","FFT1.spec","QuantMatrix","swepFFT.spec","quantFFT.spec","iquantFFT.spec","iswepFFT.spec","iFFTspec","imgArrayOut","ErrorLog"];
 }
 
-function processingVideoKompFFT() { 
+function processingVideoKompFFT() {
 	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var splitFreq = parseFloat(document.getElementById("In3").value);
@@ -282,8 +282,8 @@ function processingVideoKompFFT() {
 	setFreqQuantMatrix(QuantMatrix,TPquant,HPquant,splitFreq);
 	imgArrayIn = readCanvas(videoPlayer,0);
 	// Process chain begin    ---// Loop through the pixels, turning them in-RGB-Out
-		RGBtoGRAY( BridnessSamples,imgArrayIn); 
-		GRAYtoRGB(imgArrayIn2, BridnessSamples); 	
+		RGBtoGRAY( BridnessSamples,imgArrayIn);
+		GRAYtoRGB(imgArrayIn2, BridnessSamples);
 		setFFT(swepFFT,imgArrayIn2);
 		FFT1.spec=swepFFT.spec.slice(0,swepFFT.spec.length);
 		swapFFTfor(swepFFT)
@@ -291,14 +291,14 @@ function processingVideoKompFFT() {
 
 		setInvQuantFFT(iswepFFT,quantFFT,QuantMatrix);
 		iquantFFT.spec=iswepFFT.spec.slice(0,iswepFFT.spec.length);
-		swapFFTback(iswepFFT)				
-		setIFFT(imgArrayOut, iswepFFT);	
-		RGBtoGRAY(iFFTspec,imgArrayOut);  
-		
+		swapFFTback(iswepFFT)
+		setIFFT(imgArrayOut, iswepFFT);
+		RGBtoGRAY(iFFTspec,imgArrayOut);
+
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
-		
-	analyseError(ErrorLog,iFFTspec, BridnessSamples,255) 
+
+	analyseError(ErrorLog,iFFTspec, BridnessSamples,255)
 	analyseVideoKompressionFFT(KompressionLog, TPquant, HPquant, splitFreq)
 	LogArray = ["imgArrayIn","BridnessSamples","FFT1.spec","QuantMatrix","swepFFT.spec","quantFFT.spec","iquantFFT.spec","iswepFFT.spec","iFFTspec","imgArrayOut","ErrorLog"];
 }
@@ -319,7 +319,7 @@ function GRAYFFT(FFT_data,idata){
 	var i = 0,
         val = 0,
         p = 0;
-			
+
 	for(var y=0; y<display_fac; y++) {
         i = y*display_fac;
         for(var x=0; x<display_fac; x++) {
@@ -327,7 +327,7 @@ function GRAYFFT(FFT_data,idata){
             FFT_data.imag[i + x] = 0.0;
         }
     }
-} 
+}
 function setIFFT(idata,FFT_data)	{
 	var i = 0,
         val = 0,
@@ -348,21 +348,21 @@ function swapFFTfor(iFFT)	{
 	var islog= true;
 	var maxSpectrum= 1.0;
 	iFFT.imag[0] =0;
-	FrequencyFilter.swap(iFFT.real, iFFT.imag); 
+	FrequencyFilter.swap(iFFT.real, iFFT.imag);
 	FFT.fftspectrum(iFFT.spec, maxSpectrum, iFFT.real, iFFT.imag, islog);
 }
 function swapFFTback(iFFT)	{
 	var islog= true;
 	var maxSpectrum= 1.0;
 	iFFT.imag[0] =0;
-	FrequencyFilter.swap(iFFT.real, iFFT.imag); 
+	FrequencyFilter.swap(iFFT.real, iFFT.imag);
 	FFT.fftspectrum(iFFT.spec, maxSpectrum, iFFT.real, iFFT.imag, islog);
 }
 
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
-			
+
 function setFreqQuantMatrix(iQuantMatrix, TPspann, HPspann, splitFreq)	{
- 
+
 }
 
 function setQuantFFT(iergFFT, idataFFT, spanneMatrix, iRound)	{
@@ -370,7 +370,7 @@ function setQuantFFT(iergFFT, idataFFT, spanneMatrix, iRound)	{
 }
 
 function setInvQuantFFT(iergFFT, idataFFT, spanneMatrix)	{
- 
+
 }
 
 
@@ -378,36 +378,36 @@ function setInvQuantFFT(iergFFT, idataFFT, spanneMatrix)	{
 
 //--------------------Delta
 
-function processingAudioGenKompDelta(event) {  
+function processingAudioGenKompDelta(event) {
 	var quant = parseFloat(document.getElementById("In1").value);
 	var Round =6;
-	// Process chain begin ------------------------------------   
+	// Process chain begin ------------------------------------
 	setDelta(DeltaSamplesP, AudioTestArray);   // L�sung 3.1
 	setQuant(QuantSamplesP, DeltaSamplesP, quant, Round);
-	
+
 	setIQuant(iQuantSamplesP, QuantSamplesP, quant);
-	setIDelta(iDeltaSamplesP, iQuantSamplesP);   // L�sung 3.1		
+	setIDelta(iDeltaSamplesP, iQuantSamplesP);   // L�sung 3.1
 	// Process chain end
     writeWebAudio(event,iDeltaSamplesP);
-	
-	analyseError(ErrorLog,iDeltaSamplesP, AudioTestArray,2.0); 
+
+	analyseError(ErrorLog,iDeltaSamplesP, AudioTestArray,2.0);
 	LogArray = ["AudioTestArray",  "DeltaSamplesP", "QuantSamplesP", "iQuantSamplesP", "iDeltaSamplesP", "ErrorLog"];
  }
 
-function processingAudioKompDelta(event) {  
+function processingAudioKompDelta(event) {
  	var quant = parseFloat(document.getElementById("In1").value);
 	var Round =6;
 	audArrayIn = readWebAudio(event);
-	// Process chain begin    
+	// Process chain begin
 	StereoToMono(monoSamples, audArrayIn);
 	setDelta(DeltaSamplesP, monoSamples);   // L�sung 3.1
 	setQuant(QuantSamplesP, DeltaSamplesP, quant, Round);
-	
+
 	setIQuant(iQuantSamplesP, QuantSamplesP, quant);
-	setIDelta(iDeltaSamplesP, iQuantSamplesP);   // L�sung 3.1		
+	setIDelta(iDeltaSamplesP, iQuantSamplesP);   // L�sung 3.1
 	// Process chain end
     writeWebAudio(event.outputBuffer,iDeltaSamplesP);
-	
+
 	analyseError(ErrorLogP,iDeltaSamplesP, monoSamples,2.0) ;
 	analyseAudioKompressionDelta(KompressionLogP, quant );
 	LogArray = ["monoSamples",  "DeltaSamplesP", "QuantSamplesP", "iQuantSamplesP", "iDeltaSamplesP", "ErrorLogP"];
@@ -415,20 +415,20 @@ function processingAudioKompDelta(event) {
 
 //--------------------Subband
 
-function processingAudioGenKompSubband(event) {  
+function processingAudioGenKompSubband(event) {
 	var down_fac = 2;
 	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var Round =5;
-	// Process chain begin ------------------------------------   
-	setALength(ALengthSamples, AudioTestArray);   
-	setTP1O1D(TPsamples, ALengthSamples);   
-	setHP1O1D(HPsamples, ALengthSamples);   
+	// Process chain begin ------------------------------------
+	setALength(ALengthSamples, AudioTestArray);
+	setTP1O1D(TPsamples, ALengthSamples);
+	setHP1O1D(HPsamples, ALengthSamples);
 	setDownsampling(TPdownsamples, TPsamples, down_fac);
     setDownsampling(HPdownsamples, HPsamples, down_fac);
 	setQuant(TPquantsamples, TPdownsamples, TPquant, Round);
 	setQuant(HPquantsamples, HPdownsamples, HPquant, Round);
-	
+
 	setIQuant(TPIquantsamples, TPquantsamples, TPquant);
 	setIQuant(HPIquantsamples, HPquantsamples, HPquant);
 	setUpsampling(TPupsamples, TPIquantsamples, down_fac);
@@ -437,31 +437,31 @@ function processingAudioGenKompSubband(event) {
     setAHP1O1D(AHPOutsamples, HPupsamples);
 	setMix(MixOutSamples, ATPOutsamples, AHPOutsamples);
 	setDelay(DelaySamples, MixOutSamples,1)
-	setAmplitude(ScaleSamples, DelaySamples, 2);   
+	setAmplitude(ScaleSamples, DelaySamples, 2);
 	// Process chain end
     writeWebAudio(event,ScaleSamples);
-	analyseError(ErrorLog,ScaleSamples, AudioTestArray,2.0) 
-	
+	analyseError(ErrorLog,ScaleSamples, AudioTestArray,2.0)
+
  	LogArray = [ "AudioTestArray", "ALengthSamples", "TPsamples",  "HPsamples", "TPdownsamples","HPdownsamples","TPquantsamples","HPquantsamples","TPIquantsamples","HPIquantsamples", "TPupsamples","HPupsamples","ATPOutsamples", "AHPOutsamples", "MixOutSamples","DelaySamples", "ScaleSamples",  "ErrorLog"];
 
 	}
 
-function processingAudioKompSubband(event) {  
+function processingAudioKompSubband(event) {
  	var down_fac = 2;
  	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var Round =5;
     audArrayIn = readWebAudio(event);
-	// Process chain begin    
-	StereoToMono(monoSamples, audArrayIn);  
-	setALength(ALengthSamplesP, monoSamples);   
+	// Process chain begin
+	StereoToMono(monoSamples, audArrayIn);
+	setALength(ALengthSamplesP, monoSamples);
 	setTP1O1D(TPsamplesP, ALengthSamplesP);   // L�sung 3.1
 	setHP1O1D(HPsamplesP, ALengthSamplesP);   // L�sung 3.1
 	setDownsampling(TPdownsamplesP, TPsamplesP, down_fac);
     setDownsampling(HPdownsamplesP, HPsamplesP, down_fac);
 	setQuant(TPquantsamplesP, TPdownsamplesP, TPquant, Round);
 	setQuant(HPquantsamplesP, HPdownsamplesP, HPquant, Round);
-	
+
 	setIQuant(TPIquantsamplesP, TPquantsamplesP, TPquant);
 	setIQuant(HPIquantsamplesP, HPquantsamplesP, HPquant);
 	setUpsampling(TPupsamplesP, TPIquantsamplesP, down_fac);
@@ -470,44 +470,44 @@ function processingAudioKompSubband(event) {
     setAHP1O1D(AHPOutsamplesP, HPupsamplesP);
 	setMix(MixOutSamplesP, ATPOutsamplesP, AHPOutsamplesP);
 	setDelay(DelaySamplesP, MixOutSamplesP,1)
-	setAmplitude(ScaleSamplesP, DelaySamplesP, 2);   
+	setAmplitude(ScaleSamplesP, DelaySamplesP, 2);
 	// Process chain end
     writeWebAudio(event.outputBuffer,ScaleSamplesP);
 
 	analyseError(ErrorLogP,ScaleSamplesP, monoSamples,2.0) ;
-	analyseAudioKompressionSubband(KompressionLogP, TPquant, HPquant  );	
+	analyseAudioKompressionSubband(KompressionLogP, TPquant, HPquant  );
  	LogArray = [ "monoSamples", "ALengthSamplesP", "TPsamplesP",  "HPsamplesP", "TPdownsamplesP","HPdownsamplesP","TPquantsamplesP","HPquantsamplesP","TPIquantsamplesP","HPIquantsamplesP", "TPupsamplesP","HPupsamplesP","ATPOutsamplesP", "AHPOutsamplesP", "MixOutSamplesP", "DelaySamplesP", "ScaleSamplesP", "ErrorLogP"];
 }
 
 //--------------------FFT
 
-function processingAudioGenKompFFT(event) {  
+function processingAudioGenKompFFT(event) {
 	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var splitFrequenz = parseFloat(document.getElementById("In3").value);
 	freqQuantMatrix(QuantMatrix,TPquant,HPquant,splitFrequenz);
 	var Round =5;
-	// Process chain begin ------------------------------------  
+	// Process chain begin ------------------------------------
 	FFTKoef.forward(oneHzAudio);
 	doFFTSpectrum(FFTKoef);
 	quantMatrix(QuantFFT,FFTKoef, QuantMatrix,Round);
 	doFFTSpectrum(QuantFFT);
-	
-	invQuantMatrix( iQuantFFT,QuantFFT, QuantMatrix,Round);	
+
+	invQuantMatrix( iQuantFFT,QuantFFT, QuantMatrix,Round);
 	doFFTSpectrum(iQuantFFT);
  	iInverseFFT = iQuantFFT.inverse(iQuantFFT.real,iQuantFFT.imag);
 	// Process chain end
     writeWebAudio(event,iInverseFFT);
-	
-	analyseError(ErrorLog,iInverseFFT, oneHzAudio,2.0); 
+
+	analyseError(ErrorLog,iInverseFFT, oneHzAudio,2.0);
 	LogArray = ["oneHzAudio",  "QuantMatrix", "FFTKoef.spectrumLong",  "QuantFFT.spectrumLong",  "iQuantFFT.spectrumLong",  "iInverseFFT", "ErrorLog"];
  }
- 
+
   function doFFTSpectrum(idata) 	{   // 1D FFT : out, in)
-     // Spectrum erzeugen 
+     // Spectrum erzeugen
 	for (i=0;i<idata.real.length;++i) 	{
 		idata.spectrumLong[i]=Math.sqrt(idata.real[i] *idata.real[i] )+ Math.sqrt(idata.imag[i] *idata.imag[i] );
-	}	
+	}
 }
 
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
@@ -519,56 +519,56 @@ function freqQuantMatrix(iQuantMatrix, iTpQuant, iHpQuant, koefNr)	{
 function quantMatrix(ifft2,ifft, iQuantMatrix,iRound)	{
 
 }
-	
+
 function invQuantMatrix( ifft2,ifft, iQuantMatrix,iRound)	{
 
- } 
- 
-function processingAudioKompFFT(event) {  
+ }
+
+function processingAudioKompFFT(event) {
 	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var splitFrequenz = parseFloat(document.getElementById("In3").value);
 	var Round =5;
 	freqQuantMatrix(QuantMatrixP,TPquant,HPquant,splitFrequenz);
     audArrayIn = readWebAudio(event);
-	// Process chain begin    
+	// Process chain begin
 	StereoToMono(monoSamples, audArrayIn);
 	FFTKoefP.forward(monoSamples);
 	doFFTSpectrum(FFTKoefP);
 	quantMatrix(QuantFFTP,FFTKoefP, QuantMatrixP,Round);
 	doFFTSpectrum(QuantFFTP);
-	
-	invQuantMatrix(iQuantFFTP,QuantFFTP, QuantMatrixP,Round);	
+
+	invQuantMatrix(iQuantFFTP,QuantFFTP, QuantMatrixP,Round);
 	doFFTSpectrum(iQuantFFTP);
  	iInverseFFTP = iQuantFFTP.inverse(iQuantFFTP.real,iQuantFFTP.imag);
 	// Process chain end
     writeWebAudio(event.outputBuffer,iInverseFFTP);
 
-	analyseError(ErrorLogP,iInverseFFTP, monoSamples,2.0); 
-	analyseAudioKompressionFFT(KompressionLogP, TPquant, HPquant, splitFrequenz)	
+	analyseError(ErrorLogP,iInverseFFTP, monoSamples,2.0);
+	analyseAudioKompressionFFT(KompressionLogP, TPquant, HPquant, splitFrequenz)
 	LogArray = ["monoSamples",  "QuantMatrixP", "FFTKoefP.spectrumLong",  "QuantFFTP.spectrumLong",  "iQuantFFTP.spectrumLong",  "iInverseFFTP", "ErrorLogP"];
 }
 
-function processingAudioGenWhiteNoiseKompFFT(event) {  
+function processingAudioGenWhiteNoiseKompFFT(event) {
 	var TPquant = parseFloat(document.getElementById("In1").value);
 	var HPquant = parseFloat(document.getElementById("In2").value);
 	var splitFrequenz = parseFloat(document.getElementById("In3").value);
 	var Round =5;
 	freqQuantMatrix(QuantMatrix,TPquant,HPquant,splitFrequenz);
-	genNoise(monoSamples, 2) ;  	
-	// Process chain begin    
+	genNoise(monoSamples, 2) ;
+	// Process chain begin
 	FFTKoef.forward(monoSamples);
 	doFFTSpectrum(FFTKoef);
 	quantMatrix(QuantFFT,FFTKoef, QuantMatrix,Round);
 	doFFTSpectrum(QuantFFT);
-	invQuantMatrix(iQuantFFT,QuantFFT, QuantMatrix,Round);	
+	invQuantMatrix(iQuantFFT,QuantFFT, QuantMatrix,Round);
 	doFFTSpectrum(iQuantFFT);
-	
+
  	iInverseFFT = iQuantFFT.inverse(iQuantFFT.real,iQuantFFT.imag);
 	// Process chain end
     writeWebAudio(event,iInverseFFT);
-	
-	analyseError(ErrorLog,iInverseFFT, monoSamples,2.0); 
+
+	analyseError(ErrorLog,iInverseFFT, monoSamples,2.0);
 	LogArray = ["monoSamples",  "QuantMatrix", "FFTKoef.spectrumLong",  "QuantFFT.spectrumLong",  "iQuantFFT.spectrumLong",  "iInverseFFT", "ErrorLog"];
 }
 
@@ -579,41 +579,41 @@ function processingAudioGenWhiteNoiseKompFFT(event) {
  * @param erg
  * @param idata -------------------------------
  */
-  
+
 function analyseVideoKompressionDelta(iKomLog, iQuant ){
      // Worthlength
      iKomLog[0] = 1;  // worthlength Orginal
      iKomLog[1] = 1 ; //worthlength iTPupsamples
      iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL 
+	 iKomLog[3] = 3;  // HPWL
      iKomLog[4] = 4;  // OrginalWL - TPWL;
      iKomLog[5] = 5;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;  
+	 iKomLog[6] = 6;
 	 iKomLog[7] = 7;  // CodecDatarate /
-	 iKomLog[8] = 8;	 
-     iKomLog[9] = 9  ; // all Daterate 
- 	 // Compression    
+	 iKomLog[8] = 8;
+     iKomLog[9] = 9  ; // all Daterate
+ 	 // Compression
      iKomLog[10] = 10;
 }
- 
- 
+
+
  function analyseVideoKompressionSubband(iKomLog, iTPquant, iHPquant  ){
      // Worthlength
      iKomLog[0] = 1;  // worthlength Orginal
      iKomLog[1] = 1 ; //worthlength iTPupsamples
      iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL 
+	 iKomLog[3] = 3;  // HPWL
      iKomLog[4] = 4;  // OrginalWL - TPWL;
      iKomLog[5] = 5;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;  
+	 iKomLog[6] = 6;
 	 iKomLog[7] = 7;  // CodecDatarate /
-	 iKomLog[8] = 8;	 
-     iKomLog[9] = 9  ; // all Daterate 
- 	 // Compression    
+	 iKomLog[8] = 8;
+     iKomLog[9] = 9  ; // all Daterate
+ 	 // Compression
      iKomLog[10] = 10;
 }
 
@@ -622,16 +622,16 @@ function analyseVideoKompressionDelta(iKomLog, iQuant ){
      iKomLog[0] = 1;  // worthlength Orginal
      iKomLog[1] = 1 ; //worthlength iTPupsamples
      iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL 
+	 iKomLog[3] = 3;  // HPWL
      iKomLog[4] = 4;  // OrginalWL - TPWL;
      iKomLog[5] = 5;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;  
+	 iKomLog[6] = 6;
 	 iKomLog[7] = 7;  // CodecDatarate /
-	 iKomLog[8] = 8;	 
-     iKomLog[9] = 9  ; // all Daterate 
- 	 // Compression    
+	 iKomLog[8] = 8;
+     iKomLog[9] = 9  ; // all Daterate
+ 	 // Compression
      iKomLog[10] = 10;
 }
 
@@ -643,35 +643,35 @@ function analyseAudioKompressionDelta(iKomLog, iQuant ){
      iKomLog[0] = 1;  // worthlength Orginal
      iKomLog[1] = 1 ; //worthlength iTPupsamples
      iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL 
+	 iKomLog[3] = 3;  // HPWL
      iKomLog[4] = 4;  // OrginalWL - TPWL;
      iKomLog[5] = 5;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;  
+	 iKomLog[6] = 6;
 	 iKomLog[7] = 7;  // CodecDatarate /
-	 iKomLog[8] = 8;	 
-     iKomLog[9] = 9  ; // all Daterate 
- 	 // Compression    
+	 iKomLog[8] = 8;
+     iKomLog[9] = 9  ; // all Daterate
+ 	 // Compression
      iKomLog[10] = 10;
 }
- 
- 
+
+
  function analyseAudioKompressionSubband(iKomLog, iTPquant, iHPquant  ){
      // Worthlength
      iKomLog[0] = 1;  // worthlength Orginal
      iKomLog[1] = 1 ; //worthlength iTPupsamples
      iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL 
+	 iKomLog[3] = 3;  // HPWL
      iKomLog[4] = 4;  // OrginalWL - TPWL;
      iKomLog[5] = 5;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;  
+	 iKomLog[6] = 6;
 	 iKomLog[7] = 7;  // CodecDatarate /
-	 iKomLog[8] = 8;	 
-     iKomLog[9] = 9  ; // all Daterate 
- 	 // Compression    
+	 iKomLog[8] = 8;
+     iKomLog[9] = 9  ; // all Daterate
+ 	 // Compression
      iKomLog[10] = 10;
 }
 
@@ -680,19 +680,19 @@ function analyseAudioKompressionDelta(iKomLog, iQuant ){
      iKomLog[0] = 1;  // worthlength Orginal
      iKomLog[1] = 1 ; //worthlength iTPupsamples
      iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL 
+	 iKomLog[3] = 3;  // HPWL
      iKomLog[4] = 4;  // OrginalWL - TPWL;
      iKomLog[5] = 5;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;  
+	 iKomLog[6] = 6;
 	 iKomLog[7] = 7;  // CodecDatarate /
-	 iKomLog[8] = 8;	 
-     iKomLog[9] = 9  ; // all Daterate 
- 	 // Compression    
+	 iKomLog[8] = 8;
+     iKomLog[9] = 9  ; // all Daterate
+ 	 // Compression
      iKomLog[10] = 10;
 }
-	
+
 // ---------------------------info Analyse Audio Video-------------------
 /*
 function logVideoCompression(iKomLog){
