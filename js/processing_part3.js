@@ -67,7 +67,9 @@ function setIDelta(iOutput, iInput) {
 
 function setQuant(iOutput, iInput, iQuant, iRound)	{
     for (let i=0; i<iInput.length; i++){
-        iOutput[i] = Number.parseFloat(iInput[i]/iQuant).toFixed(iRound);
+        // iOutput[i] = Number.parseFloat(iInput[i]/iQuant).toFixed(iRound);
+        iOutput[i] = runde(iInput[i]/iQuant, iRound);
+        // iOutput[i] = iInput[i]/iQuant;
     }
 }
 
@@ -184,15 +186,16 @@ function setALength(iOutput, iInput) {		//Downsampling
 }
 
 function setDownsampling(iOutput, iInput, idown_fac) {		//Downsampling
-	for (let i=0; i<iInput.length; i++){
-		iOutput[i] = iInput[i]/idown_fac;
+	for (let i=0; i<iOutput.length; i++){
+		iOutput[i] = iInput[i*idown_fac];
 	}
 }
 
 
 function setUpsampling(iOutput, iInput, idown_fac) {		//Downsampling
     for (let i=0; i<iInput.length; i++){
-        iOutput[i] = iInput[i]*idown_fac;
+        iOutput[i*idown_fac] = iInput[i];
+        iOutput[i*idown_fac+1] = 0;
     }
 }
 
@@ -201,7 +204,7 @@ function setAHP1O1D(iOutput, iInput) {
         if(i==0){
             iOutput[i]= iInput[i];
         } else {
-            iOutput[i]= (0.5*iInput[i])-(0.5*iInput[i-1]);
+            iOutput[i]= (0.5*iInput[i-1]) - (0.5*iInput[i]);
         }
     }
 }
