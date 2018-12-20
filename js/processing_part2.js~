@@ -306,9 +306,6 @@ function processingAudioKlang(event) {
 	LogArray = ["monoSamples"];
 }
 function genKlang(iOutput, iHorizontalFrequency, iSampleRate, iOffset) {
-	for(var i=0; i<iOutput.length; i++){
-		iOutput[i]=Math.sin(2*Math.PI*iHorizontalFrequency/iSampleRate*i);
-	}
 }
 
 function processingAudioVolumen(event) {

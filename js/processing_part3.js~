@@ -42,7 +42,7 @@ function processingVideoKompDelta() {
 	analyseVideoKompressionDelta(KompressionLog, quant );
 	LogArray = ["imgArrayIn", "BridnessSamples", "DeltaSamples", "QuantSamples", "iQuantSamples", "IDeltaSamples", "imgArrayOut", "ErrorLog"];
 }
-//        iOutput[i] = Math.round(iOutput[i] * 100) / 100;
+        iOutput[i] = Math.round(iOutput[i] * 100) / 100;
 
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
