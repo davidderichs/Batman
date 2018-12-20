@@ -165,7 +165,7 @@ function processingVideoKompSubband() {
     setTP1O1D(ATPOutsamples, TPupsamples);
     setAHP1O1D(AHPOutsamples, HPupsamples);
 	setMix(MixOutSamples, ATPOutsamples, AHPOutsamples);
-	setDelay(DelaySamples, MixOutSamples,1)
+	setDelay(DelaySamples, MixOutSamples,1);
 	setAmplitude(ScaleSamples, DelaySamples, 2);
 	GRAYtoRGB(imgArrayOut, ScaleSamples);
 	// Process chain end  ------------------------------------
