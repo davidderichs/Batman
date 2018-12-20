@@ -42,11 +42,15 @@ function processingVideoKompDelta() {
 	analyseVideoKompressionDelta(KompressionLog, quant );
 	LogArray = ["imgArrayIn", "BridnessSamples", "DeltaSamples", "QuantSamples", "iQuantSamples", "IDeltaSamples", "imgArrayOut", "ErrorLog"];
 }
+<<<<<<< HEAD
 //        iOutput[i] = Math.round(iOutput[i] * 100) / 100;
 
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
+=======
+>>>>>>> 02659aac960f69bf4ad2bd07620e0b4588cad791
 
+// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 function setDelta(iOutput, iInput) {
 	for (let i=0; i<iInput.length; i++){
 		if(i===0){
@@ -193,12 +197,13 @@ function setDownsampling(iOutput, iInput, idown_fac) {		//Downsampling
 }
 
 
-function setUpsampling(iOutput, iInput, idown_fac) {		//Downsampling
-    for (let i=0; i<iInput.length; i += idown_fac){
-        iOutput[i] = iInput[i];
-        for(let x = 0; x < idown_fac; x++){
-            iOutput[i + x + 1] = 0;
-        }
+function setUpsampling(iOutput, iInput, idown_fac) {
+	for (let i= 0; i<iOutput.length; i++){
+        iOutput[i] = 0;
+	}
+	//Downsampling
+    for (let i=0; i<iInput.length; i++){
+        iOutput[i*idown_fac] = iInput[i];
     }
 }
 
