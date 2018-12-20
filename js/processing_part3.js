@@ -42,6 +42,7 @@ function processingVideoKompDelta() {
 	analyseVideoKompressionDelta(KompressionLog, quant );
 	LogArray = ["imgArrayIn", "BridnessSamples", "DeltaSamples", "QuantSamples", "iQuantSamples", "IDeltaSamples", "imgArrayOut", "ErrorLog"];
 }
+        iOutput[i] = Math.round(iOutput[i] * 100) / 100;
 
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
@@ -193,9 +194,11 @@ function setDownsampling(iOutput, iInput, idown_fac) {		//Downsampling
 
 
 function setUpsampling(iOutput, iInput, idown_fac) {		//Downsampling
-    for (let i=0; i<iInput.length; i++){
-        iOutput[i*idown_fac] = iInput[i];
-        iOutput[i*idown_fac+1] = 0;
+    for (let i=0; i<iInput.length; i += idown_fac){
+        iOutput[i] = iInput[i];
+        for(let x = 0; x < idown_fac; x++){
+            iOutput[i + x + 1] = 0;
+        }
     }
 }
 
