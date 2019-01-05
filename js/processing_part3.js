@@ -16,6 +16,7 @@ function processingVideoGenKompDelta() {
 
 	setIQuant(iQuantSamples, QuantSamples, quant);
 	setIDelta(IDeltaSamples, iQuantSamples);
+    GRAYtoRGB(imgArrayOut, IDeltaSamples);
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
 
@@ -38,7 +39,7 @@ function processingVideoKompDelta() {
 	// Process chain end
 	writeCanvas(iImageOut);
 
-	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255);
+	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255, quant);
 	analyseVideoKompressionDelta(KompressionLog, quant );
 	LogArray = ["imgArrayIn", "BridnessSamples", "DeltaSamples", "QuantSamples", "iQuantSamples", "IDeltaSamples", "imgArrayOut", "ErrorLog"];
 }
@@ -49,7 +50,7 @@ function setDelta(iOutput, iInput) {
 		if(i===0){
 			iOutput[i] = iInput[i];
 		} else {
-            iOutput[i]=iInput[i]-iInput[i-1];
+            iOutput[i]= iInput[i]-iInput[i-1];
 		}
 	}
 }
@@ -66,7 +67,7 @@ function setIDelta(iOutput, iInput) {
 function setQuant(iOutput, iInput, iQuant, iRound)	{
     for (let i=0; i<iInput.length; i++){
         // iOutput[i] = Number.parseFloat(iInput[i]/iQuant).toFixed(iRound);
-        iOutput[i] = runde(iInput[i]/iQuant, iRound);
+        iOutput[i] = parseFloat( runde(iInput[i]/iQuant, iRound) );
         // iOutput[i] = iInput[i]/iQuant;
     }
 }
@@ -77,32 +78,51 @@ function setIQuant(iOutput, iInput, iQuant)	{
     }
 }
 
-	// iInput2 ist DELTA, iInput ist BrightnesSamples
-function analyseError(iErrorLog, iInput2, iInput,iMaxAmplitude)  	{
+	// iInput2 ist iDELTASamples, iInput ist BrightnesSamples
+function analyseError(iErrorLog, iInput2, iInput,iMaxAmplitude, quant)  	{
 	SAD = 0;
 	MSE = 0;
-	PSNR= 0;
+	PSNR = 0;
 	var Dif;
 	var iMaxAmplitude = parseFloat(iMaxAmplitude);
 
 	for ( let i = 0; i < (iInput2.length); i++ ) {
 		if(typeof iInput2[i] != 'undefined'){
 			if(! isNaN(iInput[i]) && ! isNaN(iInput2[i])){
-				Dif = iInput[i];
-				MSE = 1;
-				SAD = 2;
-				iErrorLog[i] = Dif;
+				Dif = iInput2[i] - iInput[i];
+
+				// Habe hier eine Fehlertoleranz eingebaut.
+				if(Math.abs(Dif) > 1.0 ){
+                    iErrorLog[i] = Dif;
+				} else {
+					iErrorLog[i] = 0.00;
+				}
+
 			}
 		}
 	}
 
+	for ( let i = 0; i<ErrorLog.length; i++){
+        MSE += Math.pow(ErrorLog[i], 2);
+        SAD += Math.abs(ErrorLog[i]);
+	}
+
+	MSE = MSE / ErrorLog.length;
+
 	MSE += 0.000000001;
-	PSNR  =3;
+	PSNR = 3;
 	MSE  -= 0.000000001;
 
-	SAD =runde (SAD,2);
-    MSE =runde (MSE,2);
-	PSNR=runde (PSNR,2);
+
+    if(runde(MSE, 2) !== '0.00'){
+        PSNR = 10*Math.log10(Math.sqrt(iMaxAmplitude)/MSE);
+	} else {
+    	PSNR = 0.00;
+	}
+
+	SAD = runde (SAD,2);
+    MSE = runde (MSE,2);
+	PSNR = runde (PSNR,2);
 }
 
 
