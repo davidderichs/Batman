@@ -68,6 +68,7 @@ function setQuant(iOutput, iInput, iQuant, iRound)	{
     for (let i=0; i<iInput.length; i++){
         // iOutput[i] = Number.parseFloat(iInput[i]/iQuant).toFixed(iRound);
         iOutput[i] = parseFloat( runde(iInput[i]/iQuant, iRound) );
+        // iOutput[i] = runde(iInput[i]/iQuant, iRound);
         // iOutput[i] = iInput[i]/iQuant;
     }
 }
@@ -247,12 +248,12 @@ function processingVideoGenKompFFTOneHz() {
 		GRAYtoRGB(imgArrayIn2, oneHz);
     	setFFT(swepFFT,imgArrayIn2);
 		FFT1.spec=swepFFT.spec.slice(0,swepFFT.spec.length);
-		swapFFTfor(swepFFT)
+		swapFFTfor(swepFFT);
 		setQuantFFT(quantFFT,swepFFT,QuantMatrix,Round);
 
 		setInvQuantFFT(iswepFFT,quantFFT,QuantMatrix);
 		iquantFFT.spec=iswepFFT.spec.slice(0,iswepFFT.spec.length);
-		swapFFTback(iswepFFT)
+		swapFFTback(iswepFFT);
 		setIFFT(imgArrayOut, iswepFFT);
 		RGBtoGRAY(iFFTspec,imgArrayOut);
 
@@ -379,15 +380,28 @@ function swapFFTback(iFFT)	{
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
 function setFreqQuantMatrix(iQuantMatrix, TPspann, HPspann, splitFreq)	{
+	for (let i=0; i<splitFreq; i++){
+	    iQuantMatrix[i] = TPspann;
+    }
+
+    for (let i=splitFreq; i<iQuantMatrix.length; i++){
+	    iQuantMatrix[i] = HPspann;
+    }
 
 }
-
+// real cosinus, imag sinus
 function setQuantFFT(iergFFT, idataFFT, spanneMatrix, iRound)	{
-
+    for (let i=0; i<idataFFT.real.length; i++){
+        iergFFT.real[i] = parseFloat( runde(idataFFT.real[i]/spanneMatrix[i], iRound));
+        iergFFT.imag[i] = parseFloat( runde(idataFFT.imag[i]/spanneMatrix[i], iRound));
+    }
 }
 
 function setInvQuantFFT(iergFFT, idataFFT, spanneMatrix)	{
-
+    for (let i=0; i<idataFFT.real.length; i++){
+        iergFFT.real[i] = parseFloat( idataFFT.real[i]*spanneMatrix[i]);
+        iergFFT.imag[i] = parseFloat( idataFFT.imag[i]*spanneMatrix[i]);
+    }
 }
 
 
