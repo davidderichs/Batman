@@ -91,7 +91,7 @@ function analyseError(iErrorLog, iInput2, iInput,iMaxAmplitude, quant)  	{
 		if(typeof iInput2[i] != 'undefined'){
 			if(! isNaN(iInput[i]) && ! isNaN(iInput2[i])){
 				Dif = iInput2[i] - iInput[i];
-                    iErrorLog[i] = Dif;
+                    		iErrorLog[i] = Dif;
 			}
 		}
 	}
