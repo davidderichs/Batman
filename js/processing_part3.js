@@ -16,6 +16,7 @@ function processingVideoGenKompDelta() {
 
 	setIQuant(iQuantSamples, QuantSamples, quant);
 	setIDelta(IDeltaSamples, iQuantSamples);
+    GRAYtoRGB(imgArrayOut, IDeltaSamples);
 	// Process chain end  ------------------------------------
 	writeCanvas(iImageOut);
 
@@ -38,21 +39,18 @@ function processingVideoKompDelta() {
 	// Process chain end
 	writeCanvas(iImageOut);
 
-	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255);
+	analyseError(ErrorLog,IDeltaSamples, BridnessSamples,255, quant);
 	analyseVideoKompressionDelta(KompressionLog, quant );
 	LogArray = ["imgArrayIn", "BridnessSamples", "DeltaSamples", "QuantSamples", "iQuantSamples", "IDeltaSamples", "imgArrayOut", "ErrorLog"];
 }
-        iOutput[i] = Math.round(iOutput[i] * 100) / 100;
 
-					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
-
-
+// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 function setDelta(iOutput, iInput) {
 	for (let i=0; i<iInput.length; i++){
 		if(i===0){
 			iOutput[i] = iInput[i];
 		} else {
-            iOutput[i]=iInput[i]-iInput[i-1];
+            iOutput[i]= iInput[i]-iInput[i-1];
 		}
 	}
 }
@@ -69,7 +67,7 @@ function setIDelta(iOutput, iInput) {
 function setQuant(iOutput, iInput, iQuant, iRound)	{
     for (let i=0; i<iInput.length; i++){
         // iOutput[i] = Number.parseFloat(iInput[i]/iQuant).toFixed(iRound);
-        iOutput[i] = runde(iInput[i]/iQuant, iRound);
+        iOutput[i] = parseFloat( runde(iInput[i]/iQuant, iRound) );
         // iOutput[i] = iInput[i]/iQuant;
     }
 }
@@ -80,32 +78,44 @@ function setIQuant(iOutput, iInput, iQuant)	{
     }
 }
 
-	// iInput2 ist DELTA, iInput ist BrightnesSamples
-function analyseError(iErrorLog, iInput2, iInput,iMaxAmplitude)  	{
+	// iInput2 ist iDELTASamples, iInput ist BrightnesSamples
+function analyseError(iErrorLog, iInput2, iInput,iMaxAmplitude, quant)  	{
 	SAD = 0;
 	MSE = 0;
-	PSNR= 0;
+	PSNR = 0;
 	var Dif;
 	var iMaxAmplitude = parseFloat(iMaxAmplitude);
 
 	for ( let i = 0; i < (iInput2.length); i++ ) {
 		if(typeof iInput2[i] != 'undefined'){
 			if(! isNaN(iInput[i]) && ! isNaN(iInput2[i])){
-				Dif = iInput[i];
-				MSE = 1;
-				SAD = 2;
-				iErrorLog[i] = Dif;
+				Dif = iInput2[i] - iInput[i];
+                    		iErrorLog[i] = Dif;
 			}
 		}
 	}
 
+	for ( let i = 0; i<ErrorLog.length; i++){
+        MSE += Math.pow(ErrorLog[i], 2);
+        SAD += Math.abs(ErrorLog[i]);
+	}
+
+	MSE = MSE / ErrorLog.length;
+
 	MSE += 0.000000001;
-	PSNR  =3;
+	PSNR = 3;
 	MSE  -= 0.000000001;
 
-	SAD =runde (SAD,2);
-    MSE =runde (MSE,2);
-	PSNR=runde (PSNR,2);
+
+    if(runde(MSE, 2) !== '0.00'){
+        PSNR = 10*Math.log10(Math.sqrt(iMaxAmplitude)/MSE);
+	} else {
+    	PSNR = 0.00;
+	}
+
+	SAD = runde (SAD,2);
+    MSE = runde (MSE,2);
+	PSNR = runde (PSNR,2);
 }
 
 
@@ -166,7 +176,7 @@ function processingVideoKompSubband() {
     setTP1O1D(ATPOutsamples, TPupsamples);
     setAHP1O1D(AHPOutsamples, HPupsamples);
 	setMix(MixOutSamples, ATPOutsamples, AHPOutsamples);
-	setDelay(DelaySamples, MixOutSamples,1)
+	setDelay(DelaySamples, MixOutSamples,1);
 	setAmplitude(ScaleSamples, DelaySamples, 2);
 	GRAYtoRGB(imgArrayOut, ScaleSamples);
 	// Process chain end  ------------------------------------
@@ -193,12 +203,13 @@ function setDownsampling(iOutput, iInput, idown_fac) {		//Downsampling
 }
 
 
-function setUpsampling(iOutput, iInput, idown_fac) {		//Downsampling
-    for (let i=0; i<iInput.length; i += idown_fac){
-        iOutput[i] = iInput[i];
-        for(let x = 0; x < idown_fac; x++){
-            iOutput[i + x + 1] = 0;
-        }
+function setUpsampling(iOutput, iInput, idown_fac) {
+	for (let i= 0; i<iOutput.length; i++){
+        iOutput[i] = 0;
+	}
+	//Downsampling
+    for (let i=0; i<iInput.length; i++){
+        iOutput[i*idown_fac] = iInput[i];
     }
 }
 
