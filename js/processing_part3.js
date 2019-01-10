@@ -91,12 +91,15 @@ function analyseError(iErrorLog, iInput2, iInput,iMaxAmplitude, quant)  	{
 			if(! isNaN(iInput[i]) && ! isNaN(iInput2[i])){
 				Dif = iInput2[i] - iInput[i];
 
+				/*
 				// Habe hier eine Fehlertoleranz eingebaut.
 				if(Math.abs(Dif) > 1.0 ){
-                    iErrorLog[i] = Dif;
+                    			iErrorLog[i] = Dif;
 				} else {
 					iErrorLog[i] = 0.00;
 				}
+				*/
+                    		iErrorLog[i] = Dif;
 
 			}
 		}
