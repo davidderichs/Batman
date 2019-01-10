@@ -691,7 +691,7 @@ function RGBtoGRAY(iOutput, iInput) {
     let x = 0;
     for(i = 0; i < iInput.length; i += 4){
         // mittelwert aus rgb bilden
-        let mittelwert = (iInput[i] + iInput[i + 1] + iInput[i + 2]) / 3;
+        let mittelwert = Math.round((iInput[i] + iInput[i + 1] + iInput[i + 2]) / 3);
         iOutput[x] = mittelwert;
         x++;
     };
