@@ -144,7 +144,7 @@ function processingVideoGenKompSubband() {
     setTP1O1D(ATPOutsamples, TPupsamples);
     setAHP1O1D(AHPOutsamples, HPupsamples);
 	setMix(MixOutSamples, ATPOutsamples, AHPOutsamples);
-	setDelay(DelaySamples, MixOutSamples,1)
+	setDelay(DelaySamples, MixOutSamples,1);
 	setAmplitude(ScaleSamples, DelaySamples, 2);
 	GRAYtoRGB(imgArrayOut, ScaleSamples);
 	// Process chain end  ------------------------------------
@@ -232,7 +232,7 @@ function setMix(iOutput, iInput2, iInput1) {		//Mix
 
 function setDelay(iOutput, iInput,iDelaySamples) {		//Scale und shift
     for (var i = 0; i < iOutput.length; ++i) {
-        iOutput[i] = iInput[i + iDelaySamples];
+		iOutput[i] = iInput[i + iDelaySamples];
     }
 }
 

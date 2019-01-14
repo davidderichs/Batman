@@ -129,7 +129,7 @@ function processingVideoTP10() {
 function setTP1O1D(iOutput, iInput) {
 	for (i=0;i<iInput.length;i++){
 		if(i===0){
-            iOutput[i]=(0.5*iInput[i])+0;
+            iOutput[i]=(0.5*iInput[i]);
         } else {
             iOutput[i]=(0.5*iInput[i])+(0.5*iInput[i-1]);
 		}
@@ -196,10 +196,9 @@ function processingVideoHP10_cos64() {
 function setHP1O1D(iOutput, iInput) {
     for (i=0;i<iInput.length;i++){
     	if(i==0){
-            iOutput[i]= iInput[i];
+            iOutput[i]= (0.5*iInput[i]);
 		} else {
             iOutput[i]= (0.5*iInput[i])-(0.5*iInput[i-1]);
-			// iOutput[i] = iInput[i];
 		}
     }
 }
