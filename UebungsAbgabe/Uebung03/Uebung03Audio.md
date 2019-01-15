@@ -150,6 +150,12 @@ HP = 0 bit
 
 ### f) Measurement
 
+![fft1](AssetsAudio/fft1.PNG)
+
+![fft2](AssetsAudio/fft2.jpg)
+
+![fft3](AssetsAudio/fft3.PNG)
+
 
 
 

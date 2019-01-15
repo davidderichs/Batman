@@ -544,16 +544,29 @@ function processingAudioGenKompFFT(event) {
 					// Lösung3  --------------------!!!!!!!!!!!!!!!!!
 
 function freqQuantMatrix(iQuantMatrix, iTpQuant, iHpQuant, koefNr)	{
+    for (let i=0; i<koefNr; i++){
+        iQuantMatrix[i] = iTpQuant;
+    }
+
+    for (let i=koefNr; i<iQuantMatrix.length; i++){
+        iQuantMatrix[i] = iHpQuant;
+    }
 
 }
 
 function quantMatrix(ifft2,ifft, iQuantMatrix,iRound)	{
-
+    for (let i=0; i<ifft.real.length; i++){
+        ifft2.real[i] = parseFloat( runde(ifft.real[i]/iQuantMatrix[i], iRound));
+        ifft2.imag[i] = parseFloat( runde(ifft.imag[i]/iQuantMatrix[i], iRound));
+    }
 }
 
 function invQuantMatrix( ifft2,ifft, iQuantMatrix,iRound)	{
-
- }
+    for (let i=0; i<ifft.real.length; i++){
+        ifft2.real[i] = parseFloat( ifft.real[i]*iQuantMatrix[i]);
+        ifft2.imag[i] = parseFloat( ifft.imag[i]*iQuantMatrix[i]);
+    }
+}
 
 function processingAudioKompFFT(event) {
 	var TPquant = parseFloat(document.getElementById("In1").value);
