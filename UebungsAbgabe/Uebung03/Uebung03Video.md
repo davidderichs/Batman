@@ -14,9 +14,18 @@
 
 ![quantisierung: 1](AssetsVideo/Delta-1.jpg)
 
+<p>Der Fehler bei einer Quantisierung mit Faktor 1 beträgt 0.</p>
+
+---
+
+# Video 3.1 DeltaKompression
+### d)
+
   ii. Fehler bei Quantisierung von 8
 
 ![quantisierung: 8](AssetsVideo/Delta-8.jpg)
+
+<p>Der Fehler bei einer Quantisierung mit Faktor 8 beträgt 1.12.</p>
 
 ---
 
@@ -26,67 +35,93 @@
 
 ![quantisierung: 1](AssetsVideo/Sub-1.jpg)
 
+<p>Der Fehler bei einer Quantisierung mit Faktor 1 für HP und TP beträgt 0</p>
+
+---
+
+# Video 3.2 SubbandKompression
+### c)
+
   ii. Fehler bei Quantisierung von 8
 
 ![quantisierung: 8](AssetsVideo/Sub-8.jpg)
+
+<p>Der Fehler bei einer Quantisierung mit Faktor 1 für HP und TP beträgt 2.80</p>
 
 ---
 
 # Video 3.3 FFT
 ### c)
-  i. Fehler bei Quantisierung von TP: 1 HP: 1 Grenzwert: 1
+  i. Fehler bei Quantisierung von TP: 1 HP: 1 Grenzwert: 2
 
-![quantisierung: 1](AssetsVideo/ErrorV1-1.jpg)
+![quantisierung: 1](AssetsVideo/FFT-TP1-HP1-GRENZ2.jpg)
+
+<p>Der Fehler bei den Werten TP=1, HP=1 und Grenzfrequenc=2 beträgt 0;
+
+---
+
+# Video 3.3 FFT
+### c)
 
   ii. Fehler bei Quantisierung von TP: 16 HP: 32 Grenzwert: 1
 
-![quantisierung: 8](AssetsVideo/ErrorV16-32.jpg)
+![quantisierung: 8](AssetsVideo/FFT-TP16-HP32-GRENZ2.jpg)
+
+<p>Der Fehler bei den Werten TP=1, HP=1 und Grenzfrequenc=2 beträgt 8.00;</p>
 
 ---
 
 # Video 3.4 Delta
 ### b) höchste Quantisierung bei bester Wahrnehmungs-Qualität
 
-  1500
+![quantisierung: 8](AssetsVideo/3-4-Wahrnehmung-Eigenes-Asset-Quantisierungsfaktor.jpg)
 
-![quantisierung: 8](AssetsVideo/.PNG)
+  <p>Das Bild ist bis zu einem Quantisierungsfaktor von 7 noch sehr gut erkennbar und weist keine wahrnehmbaren Fehler auf.</p>
 
+---
+
+# Video 3.4 Delta
 ### c) Wortbreite bei der optimalen Quantisierung
 
-  16 bit
+  <p>
+  Alte Wortbreite: 8
+  
+  bei einer Quantisierung von 2^W beträgt W = 2.8~
+  
+  Die Wortbreite der Kompression bei bester Wahrnehmungs-Qualität beträgt demnach 
+  
+  8 - log(7) / log(2) = 5.2~, also mindestens 6 Bit zur Speicherung</p>
+  
+---
 
+# Video 3.4 Delta
 ### d) Datenrate bei 404p25 für RGB
 
   Unkomprimierte Datenrate:
 
-  samplerate \* word size \* channels
+  25 FPS, 720 * 404 Pixel, Drei Pixel bei RGB mit jeweils 8 Bit für Wertebereich 0-255
+  25 * 720 * 404 * 3 * 8 = 174528000 bit/s = 170437,5 kBit/s = 166,44287109375 MBit/s
 
-  48000 \* 16bit \* 2 = 1536000 bit/s
-
-  1536000 bit/ = 192000 byte/s = 192 kbyte/s
-
-  Komprimierte Datenrate (wort längen reduktion) bei quant. Fakt. 2:
-
-  48000 \* 15bit \* 2 = 1440000 bit/s
-
-  1440000 bit/s = 180000 byte/s = 180 kbyte/s
 
 ### e) Kompression
 
   Runden mit Quantisierungsfaktor 6
 
-  Wertebereich 17Bit (Statt 16Bit)
-  -64.000 bis +64.000
+  Komprimierte Datenrate (wort längen reduktion) bei quant. Fakt. 7:
+  
+  25 FPS, 720 * 404 Pixel, Drei Pixel bei RGB mit jeweils 6 Bit für Wertebereich 0-255
+  25 * 720 * 404 * 3 * 6 = 130896000 bit/s = 127828,125 kBit/s = 124,8321533203125 MBit/s
+  
+  Die Datenrate wurde demnach von ca. 166 MBit/s auf ca 124MBit/s komprimiert.
+  Das entspricht in etwa einer Kompression von 25%.
+  
+---
 
-  Bestimmen der höchten Quantisierung bei bester Wahrnehmungsqualität:
-
-  Q=64 -> 6 bit weil 2^6 = 64
-
-  Berechnen der optimalen Wortbreite bei der optimalen Quantisierung:
-
-  17 bit - 6 bit = 11 bit (17 bit weil bei der Deltakomp. 1 bit hinzugefügt wird.)</p>
-
+# Video 3.4 Delta
 ### f) Measurement
+
+![DeltaKompression_Eigenes_Asset](AssetsVideo/3-4-Measurement.jpg);
+
 ---
 
 # Video 3.5 Subband
@@ -100,17 +135,28 @@
 
 16 bit
 
+---
+
+# Video 3.5 Subband
 ### d) Datenrate bei 404p25 für RGB
 
-  48000hz \* 1 channel \* 11 bit
+  Unkomprimierte Datenrate:
 
-  Berechnen der Compression Ratio:
+  25 FPS, 720 * 404 Pixel, Drei Pixel bei RGB mit jeweils 8 Bit für Wertebereich 0-255
+  25 * 720 * 404 * 3 * 8 = 174528000 bit/s = 170437,5 kBit/s = 166,44287109375 MBit/s
 
 ### e) Kompression
 
-  16:11 weil 16 bit auf 11 bit reduziert wurden.
+  Runden mit Quantisierungsfaktor TP: 256 und HP: 512
+  
+  25 FPS, 720 * 404 Pixel, Drei Pixel bei RGB mit jeweils 4 Bit HP und TP
+  25 * 720 * 404 * 3 * 4 = 87264000 bit/s = 85218,75 kBit/s = 83,221435546875 MBit/s
+  
+  Die Datenrate wurde demnach von ca. 166 MBit/s auf ca 83MBit/s komprimiert.
+  Das entspricht in etwa einer Kompression von 50%.
 
 ### f) Measurement
+![DeltaKompression_Eigenes_Asset](AssetsVideo/3-4-Measurement.jpg);
 
 ---
 

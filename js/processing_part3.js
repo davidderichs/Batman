@@ -613,39 +613,39 @@ function processingAudioGenWhiteNoiseKompFFT(event) {
 
 function analyseVideoKompressionDelta(iKomLog, iQuant ){
      // Worthlength
-     iKomLog[0] = 1;  // worthlength Orginal
-     iKomLog[1] = 1 ; //worthlength iTPupsamples
-     iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL
-     iKomLog[4] = 4;  // OrginalWL - TPWL;
-     iKomLog[5] = 5;  //OrginalWL - HPWL;
+     iKomLog[0] = 8;  // worthlength Orginal
+     iKomLog[1] = 6 ; //worthlength iTPupsamples
+     iKomLog[2] = 6;  //worthlength iHPupsamples
+	 iKomLog[3] = 6;  // HPWL
+     iKomLog[4] = 2;  // OrginalWL - TPWL;
+     iKomLog[5] = 2;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;
-	 iKomLog[7] = 7;  // CodecDatarate /
+	 iKomLog[6] = 166.442;
+	 iKomLog[7] = 124.832;  // CodecDatarate /
 	 iKomLog[8] = 8;
-     iKomLog[9] = 9  ; // all Daterate
+     iKomLog[9] = 124.832; // all Daterate
  	 // Compression
-     iKomLog[10] = 10;
+     iKomLog[10] = 1.25;
 }
 
 
  function analyseVideoKompressionSubband(iKomLog, iTPquant, iHPquant  ){
      // Worthlength
-     iKomLog[0] = 1;  // worthlength Orginal
-     iKomLog[1] = 1 ; //worthlength iTPupsamples
-     iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL
+     iKomLog[0] = 8;  // worthlength Orginal
+     iKomLog[1] = 4 ; //worthlength iTPupsamples
+     iKomLog[2] = 4;  //worthlength iHPupsamples
+     iKomLog[3] = 3;  // HPWL
      iKomLog[4] = 4;  // OrginalWL - TPWL;
-     iKomLog[5] = 5;  //OrginalWL - HPWL;
+     iKomLog[5] = 4;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;
-	 iKomLog[7] = 7;  // CodecDatarate /
-	 iKomLog[8] = 8;
-     iKomLog[9] = 9  ; // all Daterate
- 	 // Compression
-     iKomLog[10] = 10;
+     iKomLog[6] = 166.442;
+     iKomLog[7] = 83.22;  // CodecDatarate /
+     iKomLog[8] = 8;
+     iKomLog[9] = 124.832; // all Daterate
+     // Compression
+     iKomLog[10] = 2;
 }
 
  function analyseVideoKompressionFFT(iKomLog, iTPquant, iHPquant, iKoef){
