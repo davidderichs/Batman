@@ -650,20 +650,20 @@ function analyseVideoKompressionDelta(iKomLog, iQuant ){
 
  function analyseVideoKompressionFFT(iKomLog, iTPquant, iHPquant, iKoef){
      // Worthlength
-     iKomLog[0] = 1;  // worthlength Orginal
-     iKomLog[1] = 1 ; //worthlength iTPupsamples
-     iKomLog[2] = 2;  //worthlength iHPupsamples
-	 iKomLog[3] = 3;  // HPWL
-     iKomLog[4] = 4;  // OrginalWL - TPWL;
-     iKomLog[5] = 5;  //OrginalWL - HPWL;
+     iKomLog[0] = 16;  // worthlength Orginal
+     iKomLog[1] = 8 ; //worthlength iTPupsamples
+     iKomLog[2] = 8;  //worthlength iHPupsamples
+	 iKomLog[3] = 0;  // HPWL
+     iKomLog[4] = 2;  // OrginalWL - TPWL;
+     iKomLog[5] = 2;  //OrginalWL - HPWL;
 
      //Datenrate
-	 iKomLog[6] = 6;
-	 iKomLog[7] = 7;  // CodecDatarate /
+	 iKomLog[6] = 30.24;
+	 iKomLog[7] = 2.52;  // CodecDatarate /
 	 iKomLog[8] = 8;
-     iKomLog[9] = 9  ; // all Daterate
+     iKomLog[9] = 2.52  ; // all Daterate
  	 // Compression
-     iKomLog[10] = 10;
+     iKomLog[10] = 12;
 }
 
 

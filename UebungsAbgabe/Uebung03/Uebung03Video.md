@@ -163,9 +163,9 @@
 # Video 3.6 FFT
 ### b) höchste Quantisierung bei bester Wahrnehmungs-Qualität
 
-ca 66000
+![quantisierung: 8](AssetsVideo/3-6-FFT-quantisierungsfaktor.JPG)
 
-![quantisierung: 8](AssetsVideo/FFT-quantisierungsfaktor.JPG)
+ca 66000
 
 ### c) Wortbreite bei der optimalen Quantisierung
 
@@ -174,20 +174,40 @@ TP 24-16bit = 8 Bit
 HP = 0 bit
 
 ### d) Datenrate bei 404p25 für RGB
-1000 Koeffizienten * 2 (real & imaginär) * 3 Blöcke * 1 * 8 Bit
 
-= 48.000
+(2020Koef)2 (TP) + 0Bit (HP)
+
+25 Frames * 800 * 24 Blöcke * 3 * 14 Bit = 20.160.000 Bit/s = 2.52 MBit/s
 
 ### e) Kompression
 
-2000 * 8 Bit 
+14 Bit * 800 = 11200
 
-1 : 16
+131072/11200
 
+1 : 12
+
+---
+# Video 3.6 FFT
 ### f) Measurement
 
+![quantisierung: 8](AssetsVideo/3-6-FFT-Measurement.JPG)
 
+---
 
+# 3.7 Aufzeichnung eines Medienbeitrags
+
+---
+
+# 3.8 Formate und Distribution - Archive-Format des Beitrags
+
+---
+
+# 3.9 Formate und Distribution - Mobile-Format eines Beitrags
+
+---
+
+# Zusatzaufgabe Veröffntlichen Web-TV
 
 
 
