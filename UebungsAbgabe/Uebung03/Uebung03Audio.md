@@ -51,6 +51,9 @@
 
 ![quantisierung: 8](AssetsAudio/quantisierungsfaktor.PNG)
 
+---
+
+# Audio 3.4 Delta
 ### c) Wortbreite bei der optimalen Quantisierung
 
   16 bit
@@ -70,6 +73,7 @@
   48000 \* 15bit \* 2 = 1440000 bit/s
 
   1440000 bit/s = 180000 byte/s = 180 kbyte/s
+  
 
 ### e) Kompression
 
@@ -85,15 +89,31 @@
   Berechnen der optimalen Wortbreite bei der optimalen Quantisierung:
 
   17 bit - 6 bit = 11 bit (17 bit weil bei der Deltakomp. 1 bit hinzugefügt wird.)
+  
+  ---
 
-### f) Measurement
-
+# Audio 3.4 Delta
+### f) Measurement 
 
  ![measurement delta 1](AssetsAudio/delta.PNG)
+ 
+   ---
+
+# Audio 3.4 Delta
+### f) Measurement 
+
 
  ![measurement delta 2](AssetsAudio/delta2.PNG)
 
+ 
+   ---
+
+# Audio 3.4 Delta
+### f) Measurement 
+
  ![measurement delta quant 8](AssetsAudio/delta8.PNG)
+ 
+ ---
 
 # Audio 3.5 Subband
 ### b) höchste Quantisierung bei bester Wahrnehmungs-Qualität
@@ -116,13 +136,31 @@
 
   16:11 weil 16 bit auf 11 bit reduziert wurden.
 
+---
+
+# Audio 3.5 Subband
+
 ### f) Measurement
 
  ![measurement subband 1](AssetsAudio/subband.PNG)
+ 
+ ---
+
+# Audio 3.5 Subband
+
+### f) Measurement
 
  ![measurement subband 2](AssetsAudio/subband2.PNG)
+ 
+---
+
+# Audio 3.5 Subband
+
+### f) Measurement
 
  ![measurement subband quant 8](AssetsAudio/subband8.PNG)
+ 
+---
 
 # Audio 3.6 FFT
 ### b) höchste Quantisierung bei bester Wahrnehmungs-Qualität
@@ -131,11 +169,15 @@ ca 66000
 
 ![quantisierung: 8](AssetsAudio/FFT-quantisierungsfaktor.jpg)
 
+---
+
+# Audio 3.6 FFT
 ### c) Wortbreite bei der optimalen Quantisierung
 
 TP 24-16bit = 8 Bit
 
 HP = 0 bit
+
 
 ### d) Datenrate bei 48kHz
 1000 Koeffizienten * 2 (real & imaginär) * 3 Blöcke * 1 * 8 Bit
@@ -147,6 +189,10 @@ HP = 0 bit
 2000 * 8 Bit 
 
 1 : 16
+
+---
+
+# Audio 3.6 FFT
 
 ### f) Measurement
 
