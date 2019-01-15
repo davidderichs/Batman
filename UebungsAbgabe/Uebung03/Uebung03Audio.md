@@ -84,10 +84,16 @@
 
   Berechnen der optimalen Wortbreite bei der optimalen Quantisierung:
 
-  17 bit - 6 bit = 11 bit (17 bit weil bei der Deltakomp. 1 bit hinzugefügt wird.)</p>
+  17 bit - 6 bit = 11 bit (17 bit weil bei der Deltakomp. 1 bit hinzugefügt wird.)
 
 ### f) Measurement
----
+
+
+ ![measurement delta 1](AssetsAudio/delta.PNG)
+
+ ![measurement delta 2](AssetsAudio/delta2.PNG)
+
+ ![measurement delta quant 8](AssetsAudio/delta8.PNG)
 
 # Audio 3.5 Subband
 ### b) höchste Quantisierung bei bester Wahrnehmungs-Qualität
@@ -112,7 +118,11 @@
 
 ### f) Measurement
 
----
+ ![measurement subband 1](AssetsAudio/subband.PNG)
+
+ ![measurement subband 2](AssetsAudio/subband2.PNG)
+
+ ![measurement subband quant 8](AssetsAudio/subband8.PNG)
 
 # Audio 3.6 FFT
 ### b) höchste Quantisierung bei bester Wahrnehmungs-Qualität
