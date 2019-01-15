@@ -547,11 +547,9 @@ function freqQuantMatrix(iQuantMatrix, iTpQuant, iHpQuant, koefNr)	{
     for (let i=0; i<koefNr; i++){
         iQuantMatrix[i] = iTpQuant;
     }
-
     for (let i=koefNr; i<iQuantMatrix.length; i++){
         iQuantMatrix[i] = iHpQuant;
     }
-
 }
 
 function quantMatrix(ifft2,ifft, iQuantMatrix,iRound)	{
