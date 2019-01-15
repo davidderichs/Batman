@@ -129,7 +129,7 @@
 
 ca 66000
 
-![quantisierung: 8](AssetsAudio/FFT-quantisierungsfaktor.JPG)
+![quantisierung: 8](AssetsAudio/FFT-quantisierungsfaktor.jpg)
 
 ### c) Wortbreite bei der optimalen Quantisierung
 
